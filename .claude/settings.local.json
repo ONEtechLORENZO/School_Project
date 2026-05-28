@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\"C:\\\\Users\\\\Utente\\\\AppData\\\\Local\\\\Microsoft\\\\WinGet\\\\Packages\\\\PHP.PHP.8.4_Microsoft.Winget.Source_8wekyb3d8bbwe\\\\php.exe\" -S localhost:8080)",
+      "Bash(npm install *)",
+      "Bash(npm run *)"
+    ]
+  }
+}
