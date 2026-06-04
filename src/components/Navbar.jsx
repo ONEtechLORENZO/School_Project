@@ -1,14 +1,88 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-const dropdownItems = [
-  'Iscrizioni al Montini',
-  'Contributi economici e fattuali delle famiglie',
-  'Regolamento istituto',
-  'Pagamenti, IBAN e info bancarie',
+const navItems = [
+  {
+    label: 'Home',
+    dropdown: null,
+    path: '/',
+  },
+  {
+    label: 'Ingresso al Montini',
+    dropdown: [
+      'Iscrizioni al Montini',
+      'Contributi economici e fattuali delle famiglie',
+      'Regolamento istituto',
+      'Pagamenti, IBAN e info bancarie',
+    ],
+  },
+  {
+    label: 'Chi siamo',
+    dropdown: [
+      'Il Montini ieri e oggi',
+      'Intervista a Don Paolo Alliata',
+      'Le parole del rettore',
+      'Docenti',
+      'Centro culturale don Carlo Calori',
+    ],
+  },
+  {
+    label: 'Scuola e didattica',
+    dropdown: [
+      'Liceo Classico',
+      'Linguistico economico giuridico',
+      'Materiali scolastici',
+      'Certificazioni e sperimentazioni',
+      'Le nostre iniziative',
+      'Supporto agli studenti',
+      "L'estate del Montini",
+    ],
+  },
+  {
+    label: 'Comunicazioni',
+    dropdown: [
+      'Colloqui con i genitori',
+      'Calendario',
+      'Notizie',
+    ],
+  },
+  {
+    label: 'Documentazione obbligatoria',
+    dropdown: [
+      'DL 73/2021 e sostegni bis',
+      'Contributi pubblici',
+      'Bandi Europei',
+    ],
+  },
+  {
+    label: 'Cooperativa Milano 15',
+    dropdown: [
+      'Visura cooperativa',
+      'IBAN e pagamenti',
+      'Regolamento soci e cooperativa',
+    ],
+  },
+  {
+    label: 'Contattaci',
+    dropdown: null,
+    path: '/contattaci',
+  },
 ]
 
 export default function Navbar() {
-  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [openIndex, setOpenIndex] = useState(null)
+  const closeTimers = {}
+
+  const handleEnter = (i) => {
+    clearTimeout(closeTimers[i])
+    setOpenIndex(i)
+  }
+
+  const handleLeave = (i) => {
+    closeTimers[i] = setTimeout(() => {
+      setOpenIndex((prev) => (prev === i ? null : prev))
+    }, 120)
+  }
 
   return (
     <header className="topbar">
@@ -20,42 +94,50 @@ export default function Navbar() {
       </div>
 
       <nav className="topbar-nav">
-        <div
-          className="nav-dropdown"
-          onMouseEnter={() => setDropdownOpen(true)}
-          onMouseLeave={() => setDropdownOpen(false)}
-        >
-          <a href="#">
-            Ingresso al Montini <i className="fas fa-chevron-down"></i>
-          </a>
-          {dropdownOpen && (
-            <div className="dropdown-menu">
-              {dropdownItems.map((item) => (
-                <a key={item} href="#">{item}</a>
-              ))}
+        {navItems.map((item, i) =>
+          item.path && !item.dropdown ? (
+            <Link key={item.label} to={item.path} className="nav-home-link">{item.label}</Link>
+          ) : item.dropdown ? (
+            <div
+              key={item.label}
+              className="nav-dropdown"
+              onMouseEnter={() => handleEnter(i)}
+              onMouseLeave={() => handleLeave(i)}
+            >
+              <a href="#">
+                {item.label} <i className="fas fa-chevron-down"></i>
+              </a>
+              {openIndex === i && (
+                <div className="dropdown-menu">
+                  {item.dropdown.map((sub) => (
+                    sub === 'Iscrizioni al Montini'
+                      ? <Link key={sub} to="/iscrizioni">{sub}</Link>
+                      : sub === 'Contributi economici e fattuali delle famiglie'
+                      ? <Link key={sub} to="/contributi-economici">{sub}</Link>
+                      : sub === 'Regolamento istituto'
+                      ? <Link key={sub} to="/regolamento">{sub}</Link>
+                      : sub === 'Pagamenti, IBAN e info bancarie'
+                      ? <Link key={sub} to="/pagamenti">{sub}</Link>
+                      : sub === 'Il Montini ieri e oggi'
+                      ? <Link key={sub} to="/il-montini-ieri-e-oggi">{sub}</Link>
+                      : sub === 'Intervista a Don Paolo Alliata'
+                      ? <Link key={sub} to="/intervista-don-paolo-alliata">{sub}</Link>
+                      : sub === 'Le parole del rettore'
+                      ? <Link key={sub} to="/le-parole-del-rettore">{sub}</Link>
+                      : sub === 'Docenti'
+                      ? <Link key={sub} to="/docenti">{sub}</Link>
+                      : <a key={sub} href="#">{sub}</a>
+                  ))}
+                </div>
+              )}
             </div>
-          )}
-        </div>
+          ) : (
+            <a key={item.label} href="#">{item.label}</a>
+          )
 
-        <a href="#">Chi siamo</a>
-        <a href="#">Scuola e didattica</a>
-
-        <a href="#" className="logo">
-          <div className="logo-circle"><i className="fas fa-graduation-cap"></i></div>
-          Educve
-        </a>
-
-        <a href="#">Comunicazioni</a>
-        <a href="#">Documentazione obbligatoria</a>
-        <a href="#">Cooperativa Milano 15</a>
-        <a href="#">Contattaci</a>
+        )}
       </nav>
 
-      <div className="topbar-right">
-        <span className="lang">Italiano <i className="fas fa-globe"></i></span>
-        <a href="#"><i className="fas fa-magnifying-glass"></i></a>
-        <a href="#"><i className="fas fa-bars"></i></a>
-      </div>
     </header>
   )
 }
