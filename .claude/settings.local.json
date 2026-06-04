@@ -3,7 +3,30 @@
     "allow": [
       "Bash(\"C:\\\\Users\\\\Utente\\\\AppData\\\\Local\\\\Microsoft\\\\WinGet\\\\Packages\\\\PHP.PHP.8.4_Microsoft.Winget.Source_8wekyb3d8bbwe\\\\php.exe\" -S localhost:8080)",
       "Bash(npm install *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\Public\\\\Dove il sapere.png\" \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\public\\\\hero-bg.png\" -Force)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173/hero-bg.png)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080/hero-bg.png)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\public\\\\hero-bg.png\" \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\src\\\\assets\\\\hero-bg.png\" -Force)",
+      "PowerShell(New-Item -ItemType Directory -Path \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\src\\\\assets\" -Force)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\Public\\\\image \\(31\\).png\" \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\src\\\\assets\\\\logo1.png\" -Force)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\Public\\\\image \\(32\\).png\" \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\src\\\\assets\\\\logo2.png\" -Force)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\Public\\\\image \\(33\\).png\" \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\src\\\\assets\\\\logo3.png\" -Force)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\Public\\\\image \\(34\\).png\" \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\src\\\\assets\\\\logo4.png\" -Force)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\Public\\\\school logo \\(1\\).png\" \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\src\\\\assets\\\\school-logo.png\" -Force)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\Public\\\\Phone \\(1\\).png\" \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\src\\\\assets\\\\phone-mockup.png\" -Force)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\Public\\\\Ingresso al Montini.png\" \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\src\\\\assets\\\\ingresso-montini.png\" -Force)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\Public\\\\cahtuto.png\" \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\src\\\\assets\\\\cahtuto.png\" -Force)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\Public\\\\5x1000 al Montini.png\" \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\src\\\\assets\\\\cinquemille-bg.png\" -Force)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\Public\\\\cahtuto12.png\" \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\src\\\\assets\\\\cahtuto.png\" -Force)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\Public\\\\Dove il sapere12.png\" \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\src\\\\assets\\\\hero-bg.png\" -Force)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\Public\\\\Iscrizione Primo.png\" \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\src\\\\assets\\\\iscrizione-primo.png\" -Force)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\Public\\\\Contributi economici.png\" \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\src\\\\assets\\\\contributi-economici.png\" -Force)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\Public\\\\Regolamento di Istituto.png\" \"C:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\src\\\\assets\\\\regolamento-istituto.png\" -Force)",
+      "Bash(pkill -f \"vite\")",
+      "Bash(Select-Object -First 20)",
+      "PowerShell(Get-Process node -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\Public\\\\\" -File | Where-Object {$_.Name -match '\\\\.\\(png|jpg|jpeg\\)$'} | Select-Object Name | Sort-Object Name)"
     ]
   }
 }
