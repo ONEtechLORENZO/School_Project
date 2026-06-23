@@ -10,7 +10,7 @@ a { text-decoration: none; }
 
 /* ── TOPBAR ── */
 .topbar {
-  background: var(--crimson);
+  background: #001839;
   padding: 0 60px;
   height: 56px;
   display: flex;
