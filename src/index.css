@@ -1,8 +1,8 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
-  --crimson: #8B0A2A;
-  --crimson-dark: #6d0820;
-  --navy: #001839;
+  --crimson: #001839;
+  --crimson-dark: #001839;
+  --navy: #0078bd;
   --text: #100f2c;
 }
 body { font-family: 'Inter', sans-serif; color: var(--text); }
@@ -2245,7 +2245,7 @@ a { text-decoration: none; }
 .contattaci-main-title {
   font-size: 28px;
   font-weight: 900;
-  color: #8B0A2A;
+  color: #001839;
   text-transform: capitalize;
   margin: 0 auto 120px auto;
   letter-spacing: 0.5px;
@@ -2278,7 +2278,7 @@ a { text-decoration: none; }
   margin-right: auto;
 }
 .contattaci-form-block {
-  background: #0D1B3E;
+  background: #0078bd;
   padding: 80px;
   display: flex;
   align-items: center;
@@ -2296,7 +2296,7 @@ a { text-decoration: none; }
 .contattaci-section-title {
   font-size: 24px;
   font-weight: 900;
-  color: #0D1B3E;
+  color: #0078bd;
   text-transform: capitalize;
   margin: 0 0 20px 0;
   letter-spacing: 0.5px;
@@ -2309,7 +2309,7 @@ a { text-decoration: none; }
 .contattaci-label {
   font-size: 13px;
   font-weight: 700;
-  color: #0D1B3E;
+  color: #0078bd;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin: 0;
@@ -2317,7 +2317,7 @@ a { text-decoration: none; }
 .contattaci-value {
   font-size: 15px;
   font-weight: 600;
-  color: #8B0A2A !important;
+  color: #001839 !important;
   margin: 0;
   text-decoration: none;
 }
@@ -2326,19 +2326,19 @@ a { text-decoration: none; }
 }
 .contattaci-subtitle {
   font-size: 12px;
-  color: #0D1B3E;
+  color: #0078bd;
   margin: 0;
   margin-top: 8px;
 }
 .contattaci-address {
   font-size: 15px;
-  color: #8B0A2A;
+  color: #001839;
   margin: 0;
   line-height: 1.6;
 }
 .contattaci-social {
   font-size: 15px;
-  color: #8B0A2A;
+  color: #001839;
   margin: 0;
   font-weight: 600;
 }
@@ -2394,7 +2394,7 @@ a { text-decoration: none; }
   border-radius: 24px;
   font-size: 14px;
   font-family: inherit;
-  background: #8B0A2A;
+  background: #001839;
   color: white;
   transition: background-color 0.2s;
 }
@@ -2424,7 +2424,7 @@ a { text-decoration: none; }
 }
 .form-button {
   background: white;
-  color: #8B0A2A;
+  color: #001839;
   padding: 14px 48px;
   border: none;
   border-radius: 50px;
@@ -2468,21 +2468,21 @@ a { text-decoration: none; }
 .montini-history-number {
   font-size: 72px;
   font-weight: 900;
-  color: #8B0A2A;
+  color: #001839;
   line-height: 1;
   margin: 0;
 }
 .montini-history-title {
   font-size: 24px;
   font-weight: 900;
-  color: #8B0A2A;
+  color: #001839;
   margin: 0;
   line-height: 1.4;
 }
 .montini-history-text {
   font-size: 15px;
   line-height: 1.7;
-  color: #0D1B3E;
+  color: #0078bd;
   margin: 0;
 }
 .montini-history-image {
@@ -2504,7 +2504,7 @@ a { text-decoration: none; }
   min-height: 1000px;
 }
 .montini-blocks-content {
-  background: #0D1B3E;
+  background: #0078bd;
   display: flex;
   flex-direction: column;
   padding: 80px 60px;
@@ -2580,7 +2580,7 @@ a { text-decoration: none; }
   margin: 0;
   font-weight: 500;
   letter-spacing: 1px;
-  border-bottom: 3px solid #8B0A2A;
+  border-bottom: 3px solid #001839;
   padding-bottom: 20px;
 }
 .intervista-heading {
@@ -2650,7 +2650,7 @@ a { text-decoration: none; }
   margin: 0;
 }
 .qa-block-navy {
-  background: #0D1B3E;
+  background: #0078bd;
 }
 .qa-block-navy .qa-icon {
   border-color: white;
@@ -2719,7 +2719,7 @@ a { text-decoration: none; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  background: #8B0A2A;
+  background: #001839;
   padding: 100px 80px;
   align-items: center;
 }
