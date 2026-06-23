@@ -2,7 +2,7 @@
 :root {
   --crimson: #8B0A2A;
   --crimson-dark: #6d0820;
-  --navy: #0D1B3E;
+  --navy: #001839;
   --text: #100f2c;
 }
 body { font-family: 'Inter', sans-serif; color: var(--text); }
