@@ -126,6 +126,8 @@ export default function Navbar() {
                       ? <Link key={sub} to="/le-parole-del-rettore">{sub}</Link>
                       : sub === 'Docenti'
                       ? <Link key={sub} to="/docenti">{sub}</Link>
+                      : sub === 'Liceo Classico'
+                      ? <Link key={sub} to="/liceo-classico-montini">{sub}</Link>
                       : <a key={sub} href="#">{sub}</a>
                   ))}
                 </div>

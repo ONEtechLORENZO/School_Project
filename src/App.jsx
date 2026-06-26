@@ -10,6 +10,7 @@ import IntervistaPage from './pages/IntervistaPage'
 import ParoleRettorePage from './pages/ParoleRettorePage'
 import DocentiPage from './pages/DocentiPage'
 import DocentiDetailPage from './pages/DocentiDetailPage'
+import LiceoClassicoPage from './pages/LiceoClassicoPage'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import LogoBar from './components/LogoBar'
@@ -68,6 +69,7 @@ function App() {
       <Route path="/le-parole-del-rettore" element={<ParoleRettorePage />} />
       <Route path="/docenti" element={<DocentiPage />} />
       <Route path="/docenti/:slug" element={<DocentiDetailPage />} />
+      <Route path="/liceo-classico-montini" element={<LiceoClassicoPage />} />
     </Routes>
   )
 }

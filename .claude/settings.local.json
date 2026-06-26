@@ -26,7 +26,34 @@
       "Bash(pkill -f \"vite\")",
       "Bash(Select-Object -First 20)",
       "PowerShell(Get-Process node -ErrorAction SilentlyContinue)",
-      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\Public\\\\\" -File | Where-Object {$_.Name -match '\\\\.\\(png|jpg|jpeg\\)$'} | Select-Object Name | Sort-Object Name)"
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\Utente\\\\Desktop\\\\School Project\\\\Public\\\\\" -File | Where-Object {$_.Name -match '\\\\.\\(png|jpg|jpeg\\)$'} | Select-Object Name | Sort-Object Name)",
+      "PowerShell(Stop-Process -Force -ErrorAction SilentlyContinue)",
+      "PowerShell(\"Stopped\")",
+      "Bash(ngrok http *)",
+      "Read(//tmp/**)",
+      "Bash(curl -s http://localhost:5173/Pelullo.jpeg)",
+      "PowerShell(Get-Process node, ngrok -ErrorAction SilentlyContinue)",
+      "PowerShell(\"Stopped all processes\")",
+      "Bash(ngrok http 5173 > /tmp/ngrok.log 2>&1 & *)",
+      "Bash(curl -s http://localhost:4040/api/tunnels)",
+      "PowerShell(\"Restarting...\")",
+      "PowerShell(Get-Process ngrok -ErrorAction SilentlyContinue)",
+      "PowerShell(\"Killed ngrok\")",
+      "PowerShell(\"Restarting dev server...\")",
+      "Bash(awk '{print $2}')",
+      "Bash(xargs kill -9)",
+      "Bash(awk 'NR!=1 {print $2}')",
+      "Bash(curl -s -X DELETE http://localhost:4041/api/tunnels/command_line)",
+      "Bash(curl -s http://localhost:4041/api/tunnels)",
+      "Bash(ngrok config *)",
+      "Bash(pkill -f \"npm run dev\")",
+      "Bash(curl -s -I http://localhost:5173/Pelullo.jpeg)",
+      "Bash(pkill -f \"npm\\\\|node\")",
+      "PowerShell(\"V All Node processes killed\")",
+      "Bash(PORT=5173 npm run dev)"
+    ],
+    "additionalDirectories": [
+      "\\tmp"
     ]
   }
 }
