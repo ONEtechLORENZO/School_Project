@@ -135,6 +135,23 @@ export default function LiceoClassicoPage() {
         </div>
       </section>
 
+      {/* Libri di Testo Block */}
+      <section style={{ backgroundColor: '#1a1a1a', padding: '80px', minHeight: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <div style={{ maxWidth: '600px' }}>
+          <p style={{ color: '#0078bd', fontSize: '14px', fontWeight: 600, letterSpacing: '2px', margin: 0, marginBottom: '16px', textTransform: 'uppercase' }}>
+            LIBRI DI TESTO
+          </p>
+          <h2 style={{ fontSize: '48px', fontWeight: 900, color: 'white', lineHeight: 1.2, margin: 0 }}>
+            I libri di testo per il liceo classico
+          </h2>
+        </div>
+
+        <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#34b8fe', color: '#000', padding: '12px 32px', borderRadius: '30px', textDecoration: 'none', fontWeight: 600, fontSize: '14px', cursor: 'pointer', whiteSpace: 'nowrap' }}>
+          Scopri di più
+          <span style={{ fontSize: '18px' }}>→</span>
+        </a>
+      </section>
+
       <VideoTour />
       <Footer />
       <ScrollTop />
