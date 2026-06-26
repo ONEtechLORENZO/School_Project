@@ -76,6 +76,31 @@ export default function LiceoClassicoPage() {
         </div>
       </section>
 
+      {/* Liceo Classico Nuovi Linguaggi Section */}
+      <section style={{ backgroundColor: 'white', padding: '60px 80px', minHeight: '500px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
+        {/* Image */}
+        <div style={{ overflow: 'hidden', borderRadius: '20px', height: '400px', backgroundColor: '#e8e8e8', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#999', fontSize: '18px', fontWeight: 600 }}>
+          Immagine
+        </div>
+
+        {/* Right Content */}
+        <div>
+          <p style={{ color: '#8B0A2A', fontSize: '14px', fontWeight: 600, letterSpacing: '1px', marginBottom: '16px', margin: 0, textTransform: 'uppercase' }}>
+            LICEO CLASSICO NUOVI LINGUAGGI
+          </p>
+          <h2 style={{ fontSize: '48px', fontWeight: 900, color: '#000', lineHeight: 1.2, marginBottom: '20px', marginTop: '12px' }}>
+            Liceo classico nuovi linguaggi
+          </h2>
+          <p style={{ fontSize: '15px', lineHeight: 1.7, color: '#100f2c', marginBottom: '30px' }}>
+            Liceo classico con potenziamento media e comunicazione.
+          </p>
+          <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#8B0A2A', color: 'white', padding: '12px 32px', borderRadius: '30px', textDecoration: 'none', fontWeight: 600, fontSize: '14px', cursor: 'pointer' }}>
+            SCOPRI DI PIÙ
+            <span style={{ fontSize: '18px' }}>→</span>
+          </a>
+        </div>
+      </section>
+
       <VideoTour />
       <Footer />
       <ScrollTop />
