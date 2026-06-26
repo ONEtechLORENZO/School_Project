@@ -58,7 +58,7 @@ export default function LiceoClassicoPage() {
       </section>
 
       {/* Liceo Classico Nuovi Linguaggi Section */}
-      <section style={{ backgroundColor: '#f5f5f5', padding: '60px 80px', minHeight: '500px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
+      <section style={{ backgroundColor: '#34b8fe', padding: '60px 80px', minHeight: '500px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
         {/* Image */}
         <div style={{ overflow: 'hidden', borderRadius: '20px', height: '400px', backgroundImage: 'url(/Liceo%20classico%20nuovi%20linguaggi.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         </div>
