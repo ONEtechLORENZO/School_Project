@@ -53,19 +53,20 @@ export default function LiceoClassicoPage() {
         </div>
 
         {/* Right - Image Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
           {[1, 2, 3, 4].map((item) => (
             <div
               key={item}
               style={{
-                aspectRatio: '1 / 1',
+                width: '140px',
+                height: '140px',
                 backgroundColor: '#e8e8e8',
                 borderRadius: '8px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: '#999',
-                fontSize: '14px',
+                fontSize: '12px',
                 fontWeight: 600,
               }}
             >
