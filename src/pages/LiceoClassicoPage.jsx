@@ -52,27 +52,9 @@ export default function LiceoClassicoPage() {
           </a>
         </div>
 
-        {/* Right - Image Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 240px)', gap: '28px', justifyContent: 'center' }}>
-          {[1, 2, 3, 4].map((item) => (
-            <div
-              key={item}
-              style={{
-                width: '240px',
-                height: '240px',
-                backgroundColor: '#e8e8e8',
-                borderRadius: '8px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#999',
-                fontSize: '12px',
-                fontWeight: 600,
-              }}
-            >
-              Immagine {item}
-            </div>
-          ))}
+        {/* Right - Image */}
+        <div style={{ overflow: 'hidden', borderRadius: '20px', height: '400px', backgroundColor: '#e8e8e8', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#999', fontSize: '18px', fontWeight: 600 }}>
+          Immagine
         </div>
       </section>
 
