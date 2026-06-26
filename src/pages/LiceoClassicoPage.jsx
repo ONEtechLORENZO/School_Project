@@ -32,50 +32,46 @@ export default function LiceoClassicoPage() {
         </div>
       </section>
 
-      {/* Studiare per capire section - Light layout */}
-      <section style={{ backgroundColor: 'white', padding: '80px', minHeight: '700px', display: 'flex', alignItems: 'center' }}>
-        <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'center', width: '100%' }}>
-          {/* Left Content */}
-          <div>
-            <h2 style={{ fontSize: '56px', fontWeight: 900, color: '#000', lineHeight: 1.2, marginBottom: '30px', textTransform: 'uppercase' }}>
-              Studiare per capire, capire per cambiare
-            </h2>
+      {/* Studiare per capire section */}
+      <section style={{ backgroundColor: 'white', padding: '60px 80px', minHeight: '650px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
+        {/* Left Content */}
+        <div>
+          <h2 style={{ fontSize: '32px', fontWeight: 900, color: '#001839', lineHeight: 1.25, marginBottom: '40px', marginTop: 0 }}>
+            Studiare per capire, capire per cambiare
+          </h2>
 
-            <p style={{ fontSize: '16px', color: '#000', lineHeight: 1.8, marginBottom: '40px' }}>
+          <div style={{ fontSize: '15px', lineHeight: 1.7, color: '#100f2c' }}>
+            <p style={{ margin: '0 0 20px 0' }}>
               Al Liceo Classico Montini studiamo il passato per comprendere il presente e costruire il futuro. L'uomo, con la sua grandezza e le sue contraddizioni, è al centro del percorso, guidato da rigore, dialogo e passione.
             </p>
-
-            <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '16px', backgroundColor: '#8B0A2A', color: 'white', padding: '14px 32px', borderRadius: '8px', marginBottom: '40px', textDecoration: 'none', fontWeight: 600, fontSize: '14px', cursor: 'pointer' }}>
-              SCOPRI DI PIÙ
-              <span style={{ fontSize: '20px' }}>→</span>
-            </a>
-
-            <h3 style={{ fontSize: '32px', fontWeight: 900, color: '#000', textTransform: 'uppercase' }}>
-              La nostra comunità
-            </h3>
           </div>
 
-          {/* Right - Image Grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
-            {[1, 2, 3, 4].map((item) => (
-              <div
-                key={item}
-                style={{
-                  aspectRatio: '1 / 1',
-                  backgroundColor: '#555',
-                  borderRadius: '8px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#999',
-                  fontSize: '14px',
-                  fontWeight: 600,
-                }}
-              >
-                Immagine {item}
-              </div>
-            ))}
-          </div>
+          <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#001839', color: 'white', padding: '12px 24px', borderRadius: '6px', marginTop: '30px', textDecoration: 'none', fontWeight: 600, fontSize: '14px', cursor: 'pointer' }}>
+            SCOPRI DI PIÙ
+            <span style={{ fontSize: '18px' }}>→</span>
+          </a>
+        </div>
+
+        {/* Right - Image Grid */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+          {[1, 2, 3, 4].map((item) => (
+            <div
+              key={item}
+              style={{
+                aspectRatio: '1 / 1',
+                backgroundColor: '#e8e8e8',
+                borderRadius: '8px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: '#999',
+                fontSize: '14px',
+                fontWeight: 600,
+              }}
+            >
+              Immagine {item}
+            </div>
+          ))}
         </div>
       </section>
 
