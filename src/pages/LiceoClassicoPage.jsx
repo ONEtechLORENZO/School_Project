@@ -67,16 +67,18 @@ export default function LiceoClassicoPage() {
 
         {/* Right Content */}
         <div>
-          <p style={{ color: '#8B0A2A', fontSize: '14px', fontWeight: 600, letterSpacing: '1px', marginBottom: '16px', margin: 0, textTransform: 'uppercase' }}>
+          <p style={{ color: '#8B0A2A', fontSize: '14px', fontWeight: 600, letterSpacing: '2px', marginBottom: '12px', margin: 0, textTransform: 'uppercase' }}>
             LICEO CLASSICO NUOVI LINGUAGGI
           </p>
-          <h2 style={{ fontSize: '48px', fontWeight: 900, color: '#000', lineHeight: 1.2, marginBottom: '20px', marginTop: '12px' }}>
+          <h2 style={{ fontSize: '32px', fontWeight: 900, color: '#001839', lineHeight: 1.25, marginBottom: '40px', marginTop: 0, textTransform: 'uppercase' }}>
             Liceo classico nuovi linguaggi
           </h2>
-          <p style={{ fontSize: '15px', lineHeight: 1.7, color: '#100f2c', marginBottom: '30px' }}>
-            Liceo classico con potenziamento media e comunicazione.
-          </p>
-          <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#8B0A2A', color: 'white', padding: '12px 32px', borderRadius: '30px', textDecoration: 'none', fontWeight: 600, fontSize: '14px', cursor: 'pointer' }}>
+          <div style={{ fontSize: '15px', lineHeight: 1.7, color: '#100f2c' }}>
+            <p style={{ margin: '0 0 20px 0' }}>
+              Liceo classico con potenziamento media e comunicazione.
+            </p>
+          </div>
+          <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#001839', color: 'white', padding: '12px 24px', borderRadius: '6px', marginTop: '30px', textDecoration: 'none', fontWeight: 600, fontSize: '14px', cursor: 'pointer' }}>
             SCOPRI DI PIÙ
             <span style={{ fontSize: '18px' }}>→</span>
           </a>
