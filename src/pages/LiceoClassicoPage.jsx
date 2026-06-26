@@ -17,7 +17,7 @@ export default function LiceoClassicoPage() {
         style={{
           backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.35) 100%), url(/Liceo%20Classico%20Montini.png)`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center 40%',
+          backgroundPosition: 'center 50%',
           backgroundRepeat: 'no-repeat',
         }}
       >
