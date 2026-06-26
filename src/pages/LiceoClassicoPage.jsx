@@ -86,9 +86,14 @@ export default function LiceoClassicoPage() {
       {/* Professor Profiles Block */}
       <section style={{ backgroundColor: 'white', padding: '80px', minHeight: 'auto' }}>
         <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '32px', fontWeight: 900, color: '#001839', marginBottom: '60px', textAlign: 'center', textTransform: 'uppercase' }}>
-            I nostri docenti
-          </h2>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '60px' }}>
+            <h2 style={{ fontSize: '32px', fontWeight: 900, color: '#001839', margin: 0, textTransform: 'uppercase' }}>
+              I nostri docenti
+            </h2>
+            <a href="/docenti" style={{ fontSize: '14px', fontWeight: 600, color: '#001839', textDecoration: 'none', padding: '12px 24px', border: '2px solid #001839', borderRadius: '6px', cursor: 'pointer', transition: 'all 0.2s' }}>
+              Vedi tutti →
+            </a>
+          </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '30px' }}>
             {/* Terry Costanzo */}
