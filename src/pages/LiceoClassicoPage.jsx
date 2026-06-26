@@ -53,8 +53,7 @@ export default function LiceoClassicoPage() {
         </div>
 
         {/* Right - Image */}
-        <div style={{ overflow: 'hidden', borderRadius: '20px', height: '400px', backgroundColor: '#e8e8e8', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#999', fontSize: '18px', fontWeight: 600 }}>
-          Immagine
+        <div style={{ overflow: 'hidden', borderRadius: '20px', height: '400px', backgroundImage: 'url(/Studiare%20per%20capire,%20capire%20per%20cambiare.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         </div>
       </section>
 
