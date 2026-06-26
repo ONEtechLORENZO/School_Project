@@ -90,7 +90,7 @@ export default function LiceoClassicoPage() {
             I nostri docenti
           </h2>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '30px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '30px' }}>
             {/* Terry Costanzo */}
             <div style={{ cursor: 'pointer', textAlign: 'center', transition: 'transform 0.2s' }} onClick={() => window.location.href = '/docenti/terry-costanzo'}>
               <div style={{ width: '100%', aspectRatio: '1', borderRadius: '12px', backgroundImage: 'url(/Costanzo-768x768.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', marginBottom: '16px' }}></div>
@@ -118,19 +118,13 @@ export default function LiceoClassicoPage() {
               <h3 style={{ fontSize: '16px', fontWeight: 600, color: '#001839', margin: '0 0 8px 0' }}>Marino Marco</h3>
               <p style={{ fontSize: '13px', color: '#666', margin: 0 }}>Docente di Scienze Motorie</p>
             </div>
-          </div>
 
-          {/* Don Paolo Alliata */}
-          <div style={{ marginTop: '60px', padding: '40px', backgroundColor: '#f5f5f5', borderRadius: '12px', textAlign: 'center', cursor: 'pointer' }} onClick={() => window.location.href = '/intervista-don-paolo-alliata'}>
-            <h3 style={{ fontSize: '24px', fontWeight: 900, color: '#001839', margin: '0 0 12px 0', textTransform: 'uppercase' }}>
-              Don Paolo Alliata
-            </h3>
-            <p style={{ fontSize: '14px', color: '#666', margin: 0, marginBottom: '16px' }}>
-              Rettore dell'Istituto
-            </p>
-            <p style={{ fontSize: '14px', fontWeight: 600, color: '#0078bd' }}>
-              Ascolta l'intervista →
-            </p>
+            {/* Don Paolo Alliata */}
+            <div style={{ cursor: 'pointer', textAlign: 'center', transition: 'transform 0.2s' }} onClick={() => window.location.href = '/intervista-don-paolo-alliata'}>
+              <div style={{ width: '100%', aspectRatio: '1', borderRadius: '12px', backgroundImage: 'url(/Don%20Paolo%20Alliata.png)', backgroundSize: 'cover', backgroundPosition: 'center', marginBottom: '16px' }}></div>
+              <h3 style={{ fontSize: '16px', fontWeight: 600, color: '#001839', margin: '0 0 8px 0' }}>Don Paolo Alliata</h3>
+              <p style={{ fontSize: '13px', color: '#666', margin: 0 }}>Rettore dell'Istituto</p>
+            </div>
           </div>
         </div>
       </section>
