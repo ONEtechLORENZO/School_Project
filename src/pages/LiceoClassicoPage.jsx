@@ -90,8 +90,9 @@ export default function LiceoClassicoPage() {
             <h2 style={{ fontSize: '32px', fontWeight: 900, color: '#001839', margin: 0, textTransform: 'uppercase' }}>
               I nostri docenti
             </h2>
-            <a href="/docenti" style={{ fontSize: '14px', fontWeight: 600, color: '#001839', textDecoration: 'none', padding: '12px 24px', border: '2px solid #001839', borderRadius: '6px', cursor: 'pointer', transition: 'all 0.2s' }}>
-              Vedi tutti →
+            <a href="/docenti" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#001839', color: 'white', padding: '12px 24px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '14px', cursor: 'pointer' }}>
+              Vedi tutti
+              <span style={{ fontSize: '18px' }}>→</span>
             </a>
           </div>
 
