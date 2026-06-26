@@ -136,7 +136,7 @@ export default function LiceoClassicoPage() {
       </section>
 
       {/* Libri di Testo Block */}
-      <section style={{ backgroundColor: '#1a1a1a', padding: '80px', minHeight: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      <section style={{ backgroundColor: '#001839', padding: '80px', minHeight: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <div style={{ maxWidth: '600px' }}>
           <p style={{ color: '#0078bd', fontSize: '14px', fontWeight: 600, letterSpacing: '2px', margin: 0, marginBottom: '16px', textTransform: 'uppercase' }}>
             LIBRI DI TESTO
