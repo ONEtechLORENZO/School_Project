@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import liceoClassicoBg from '../assets/Liceo Classico Montini.png'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ScrollTop from '../components/ScrollTop'
@@ -16,7 +15,7 @@ export default function LiceoClassicoPage() {
       <section
         className="hero"
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.35) 100%), url(${liceoClassicoBg})`,
+          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.35) 100%), url(/Liceo%20Classico%20Montini.png)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center 40%',
           backgroundRepeat: 'no-repeat',
