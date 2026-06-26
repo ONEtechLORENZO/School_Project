@@ -36,7 +36,7 @@ export default function LiceoClassicoPage() {
       <section style={{ backgroundColor: 'white', padding: '60px 80px', minHeight: '650px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
         {/* Left Content */}
         <div>
-          <h2 style={{ fontSize: '32px', fontWeight: 900, color: '#001839', lineHeight: 1.25, marginBottom: '40px', marginTop: 0 }}>
+          <h2 style={{ fontSize: '32px', fontWeight: 900, color: '#001839', lineHeight: 1.25, marginBottom: '40px', marginTop: 0, textTransform: 'uppercase' }}>
             Studiare per capire, capire per cambiare
           </h2>
 
@@ -58,8 +58,8 @@ export default function LiceoClassicoPage() {
             <div
               key={item}
               style={{
-                width: '140px',
-                height: '140px',
+                width: '240px',
+                height: '240px',
                 backgroundColor: '#e8e8e8',
                 borderRadius: '8px',
                 display: 'flex',
