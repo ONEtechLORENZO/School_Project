@@ -32,51 +32,43 @@ export default function LiceoClassicoPage() {
         </div>
       </section>
 
-      {/* Studiare per capire section */}
-      <section style={{ backgroundColor: 'white', padding: '80px', minHeight: '600px' }}>
-        <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
-          {/* Image */}
-          <div style={{ overflow: 'hidden', borderRadius: '20px' }}>
-            <img src="/Liceo Classico Montini.png" alt="Studiare per capire" style={{ width: '100%', height: 'auto', display: 'block' }} />
-          </div>
-
-          {/* Text Content */}
+      {/* Studiare per capire section - Dark layout */}
+      <section style={{ backgroundColor: '#3a3a3a', padding: '80px', minHeight: '700px', display: 'flex', alignItems: 'center' }}>
+        <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'center', width: '100%' }}>
+          {/* Left Content */}
           <div>
-            <p style={{ color: '#8B0A2A', fontSize: '14px', fontWeight: 600, letterSpacing: '2px', marginBottom: '12px' }}>
-              PERCHÈ IL LICEO CLASSICO MONTINI
-            </p>
-            <h2 style={{ fontSize: '48px', fontWeight: 900, color: '#001839', lineHeight: 1.2, marginBottom: '24px' }}>
+            <h2 style={{ fontSize: '56px', fontWeight: 900, color: 'white', lineHeight: 1.2, marginBottom: '30px', textTransform: 'uppercase' }}>
               Studiare per capire, capire per cambiare
             </h2>
-            <p style={{ fontSize: '16px', color: '#100f2c', lineHeight: 1.8, marginBottom: '30px' }}>
+
+            <p style={{ fontSize: '16px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.8, marginBottom: '40px' }}>
               Al Liceo Classico Montini studiamo il passato per comprendere il presente e costruire il futuro. L'uomo, con la sua grandezza e le sue contraddizioni, è al centro del percorso, guidato da rigore, dialogo e passione.
             </p>
-            <a href="#" style={{ display: 'inline-block', backgroundColor: '#8B0A2A', color: 'white', padding: '12px 32px', borderRadius: '30px', textDecoration: 'none', fontWeight: 600, fontSize: '14px', cursor: 'pointer' }}>
-              SCOPRI DI PIÙ →
-            </a>
-          </div>
-        </div>
-      </section>
 
-      {/* Image Grid Section */}
-      <section style={{ backgroundColor: '#f8f8f8', padding: '80px', minHeight: '500px' }}>
-        <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-          <h3 style={{ fontSize: '32px', fontWeight: 900, color: '#001839', marginBottom: '60px', textAlign: 'center' }}>
-            La nostra comunità
-          </h3>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '30px' }}>
+            <div style={{ backgroundColor: '#001839', padding: '24px 32px', borderRadius: '8px', marginBottom: '40px', display: 'inline-block' }}>
+              <p style={{ color: '#0078bd', fontSize: '14px', fontWeight: 600, marginBottom: '8px' }}>SCOPRI DI PIÙ</p>
+              <div style={{ color: 'white', fontSize: '28px', fontWeight: 900 }}>→</div>
+            </div>
+
+            <h3 style={{ fontSize: '32px', fontWeight: 900, color: 'white', textTransform: 'uppercase' }}>
+              La nostra comunità
+            </h3>
+          </div>
+
+          {/* Right - Image Grid */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
             {[1, 2, 3, 4].map((item) => (
               <div
                 key={item}
                 style={{
                   aspectRatio: '1 / 1',
-                  backgroundColor: '#e8e8e8',
-                  borderRadius: '12px',
+                  backgroundColor: '#555',
+                  borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   color: '#999',
-                  fontSize: '18px',
+                  fontSize: '14px',
                   fontWeight: 600,
                 }}
               >
