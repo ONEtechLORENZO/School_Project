@@ -83,6 +83,58 @@ export default function LiceoClassicoPage() {
         </div>
       </section>
 
+      {/* Professor Profiles Block */}
+      <section style={{ backgroundColor: 'white', padding: '80px', minHeight: 'auto' }}>
+        <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: '32px', fontWeight: 900, color: '#001839', marginBottom: '60px', textAlign: 'center', textTransform: 'uppercase' }}>
+            I nostri docenti
+          </h2>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '30px' }}>
+            {/* Terry Costanzo */}
+            <div style={{ cursor: 'pointer', textAlign: 'center', transition: 'transform 0.2s' }} onClick={() => window.location.href = '/docenti/terry-costanzo'}>
+              <div style={{ width: '100%', aspectRatio: '1', borderRadius: '12px', backgroundImage: 'url(/Costanzo-768x768.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', marginBottom: '16px' }}></div>
+              <h3 style={{ fontSize: '16px', fontWeight: 600, color: '#001839', margin: '0 0 8px 0' }}>Terry Costanzo</h3>
+              <p style={{ fontSize: '13px', color: '#666', margin: 0 }}>Docente di Scienze</p>
+            </div>
+
+            {/* Palumbo Serena */}
+            <div style={{ cursor: 'pointer', textAlign: 'center', transition: 'transform 0.2s' }} onClick={() => window.location.href = '/docenti/palumbo-serena'}>
+              <div style={{ width: '100%', aspectRatio: '1', borderRadius: '12px', backgroundImage: 'url(/Palumbo.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', marginBottom: '16px' }}></div>
+              <h3 style={{ fontSize: '16px', fontWeight: 600, color: '#001839', margin: '0 0 8px 0' }}>Palumbo Serena</h3>
+              <p style={{ fontSize: '13px', color: '#666', margin: 0 }}>Docente di Lingue</p>
+            </div>
+
+            {/* Gerra Nicoletta */}
+            <div style={{ cursor: 'pointer', textAlign: 'center', transition: 'transform 0.2s' }} onClick={() => window.location.href = '/docenti/gerra-nicoletta'}>
+              <div style={{ width: '100%', aspectRatio: '1', borderRadius: '12px', backgroundImage: 'url(/Gerra-768x769.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', marginBottom: '16px' }}></div>
+              <h3 style={{ fontSize: '16px', fontWeight: 600, color: '#001839', margin: '0 0 8px 0' }}>Gerra Nicoletta</h3>
+              <p style={{ fontSize: '13px', color: '#666', margin: 0 }}>Docente di Lettere Classiche</p>
+            </div>
+
+            {/* Marino Marco */}
+            <div style={{ cursor: 'pointer', textAlign: 'center', transition: 'transform 0.2s' }} onClick={() => window.location.href = '/docenti/marino-marco'}>
+              <div style={{ width: '100%', aspectRatio: '1', borderRadius: '12px', backgroundImage: 'url(/Marino-768x768.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', marginBottom: '16px' }}></div>
+              <h3 style={{ fontSize: '16px', fontWeight: 600, color: '#001839', margin: '0 0 8px 0' }}>Marino Marco</h3>
+              <p style={{ fontSize: '13px', color: '#666', margin: 0 }}>Docente di Scienze Motorie</p>
+            </div>
+          </div>
+
+          {/* Don Paolo Alliata */}
+          <div style={{ marginTop: '60px', padding: '40px', backgroundColor: '#f5f5f5', borderRadius: '12px', textAlign: 'center', cursor: 'pointer' }} onClick={() => window.location.href = '/intervista-don-paolo-alliata'}>
+            <h3 style={{ fontSize: '24px', fontWeight: 900, color: '#001839', margin: '0 0 12px 0', textTransform: 'uppercase' }}>
+              Don Paolo Alliata
+            </h3>
+            <p style={{ fontSize: '14px', color: '#666', margin: 0, marginBottom: '16px' }}>
+              Rettore dell'Istituto
+            </p>
+            <p style={{ fontSize: '14px', fontWeight: 600, color: '#0078bd' }}>
+              Ascolta l'intervista →
+            </p>
+          </div>
+        </div>
+      </section>
+
       <VideoTour />
       <Footer />
       <ScrollTop />
