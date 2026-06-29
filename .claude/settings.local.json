@@ -50,10 +50,30 @@
       "Bash(curl -s -I http://localhost:5173/Pelullo.jpeg)",
       "Bash(pkill -f \"npm\\\\|node\")",
       "PowerShell(\"V All Node processes killed\")",
-      "Bash(PORT=5173 npm run dev)"
+      "Bash(PORT=5173 npm run dev)",
+      "PowerShell(\"V Old ngrok killed\")",
+      "Bash(pkill -f ngrok)",
+      "Bash(npx localtunnel *)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(cloudflared tunnel *)",
+      "Bash(which cloudflared *)",
+      "Bash(ngrok authtoken *)",
+      "Bash(ngrok disconnect *)",
+      "Bash(pkill -9 -f ngrok)",
+      "Bash(rm -f ~/.ngrok2/ngrok.yml)",
+      "Bash(rm -f ~/.config/ngrok/ngrok.yml)",
+      "Bash(rm -f ~/AppData/Local/ngrok/ngrok.yml)",
+      "Bash(python3 -m json.tool)",
+      "Bash(ipconfig)",
+      "Bash(awk '{print \"http://\" $1 \":5173/liceo-classico-montini\"}')",
+      "PowerShell(\"V All processes killed\")",
+      "PowerShell(\"V Server stopped\")",
+      "Bash(curl -I http://localhost:5173/Studiare%20per%20capire,%20capire%20per%20cambiare.png)",
+      "PowerShell(\"V Stopped\")"
     ],
     "additionalDirectories": [
-      "\\tmp"
+      "\\tmp",
+      "C:\\Users\\Utente\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cache"
     ]
   }
 }
