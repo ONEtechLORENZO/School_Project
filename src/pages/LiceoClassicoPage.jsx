@@ -153,33 +153,33 @@ export default function LiceoClassicoPage() {
       </section>
 
       {/* Viaggi Studio Block */}
-      <section style={{ backgroundColor: '#0078bd', padding: '80px', minHeight: 'auto' }}>
-        <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '60px', alignItems: 'center' }}>
+      <section style={{ backgroundColor: '#0078bd', padding: '120px', minHeight: 'auto' }}>
+        <div style={{ maxWidth: '1600px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.2fr 1fr', gap: '80px', alignItems: 'center' }}>
           {/* Left Content */}
           <div>
-            <p style={{ color: 'white', fontSize: '14px', fontWeight: 600, letterSpacing: '2px', margin: 0, marginBottom: '16px', textTransform: 'uppercase' }}>
+            <p style={{ color: 'white', fontSize: '16px', fontWeight: 600, letterSpacing: '3px', margin: 0, marginBottom: '24px', textTransform: 'uppercase' }}>
               VIAGGI STUDIO
             </p>
-            <h2 style={{ fontSize: '48px', fontWeight: 900, color: 'white', lineHeight: 1.2, margin: 0 }}>
+            <h2 style={{ fontSize: '56px', fontWeight: 900, color: 'white', lineHeight: 1.2, margin: 0 }}>
               I Viaggi Studio del liceo classico
             </h2>
           </div>
 
           {/* Center - Image */}
-          <div style={{ overflow: 'hidden', borderRadius: '20px', height: '400px', backgroundImage: 'url(/viaggi%20studio.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          <div style={{ overflow: 'hidden', borderRadius: '24px', height: '500px', backgroundImage: 'url(/viaggi%20studio.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           </div>
 
           {/* Right Content */}
           <div>
-            <p style={{ fontSize: '15px', lineHeight: 1.7, color: 'white', marginBottom: '30px' }}>
+            <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'white', marginBottom: '35px' }}>
               I viaggi di istruzione al Montini sono molto più di semplici gite: sono esperienze che <strong>aprono la mente, avvicinano alla cultura e trasformano lo studio in scoperta</strong>. Scoprire nuovi luoghi insieme significa crescere, imparare e creare ricordi che restano per sempre.
             </p>
-            <p style={{ fontSize: '15px', lineHeight: 1.7, color: 'white', marginBottom: '30px' }}>
+            <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'white', marginBottom: '40px' }}>
               Al Montini, la scuola si vive fuori e dentro l'aula.
             </p>
-            <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#001839', color: 'white', padding: '12px 32px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '14px', cursor: 'pointer' }}>
+            <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#001839', color: 'white', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}>
               Scopri di più
-              <span style={{ fontSize: '18px' }}>→</span>
+              <span style={{ fontSize: '20px' }}>→</span>
             </a>
           </div>
         </div>
