@@ -113,9 +113,6 @@ export default function LinguisticoPage() {
       {/* Materiali Scolastici Block */}
       <section style={{ backgroundColor: '#001839', padding: '80px', minHeight: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <div style={{ maxWidth: '600px' }}>
-          <p style={{ color: '#0078bd', fontSize: '14px', fontWeight: 600, letterSpacing: '2px', margin: 0, marginBottom: '16px', textTransform: 'uppercase' }}>
-            MATERIALI SCOLASTICI
-          </p>
           <h2 style={{ fontSize: '48px', fontWeight: 900, color: 'white', lineHeight: 1.2, margin: 0 }}>
             Materiali scolastici
           </h2>
@@ -153,6 +150,33 @@ export default function LinguisticoPage() {
               Al Montini, la scuola si vive fuori e dentro l'aula.
             </p>
             <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#001839', color: 'white', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}>
+              Scopri di più
+              <span style={{ fontSize: '20px' }}>→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Certificazioni Linguistiche Block */}
+      <section style={{ backgroundColor: '#001839', padding: '120px', minHeight: 'auto' }}>
+        <div style={{ maxWidth: '1600px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.2fr 1fr', gap: '80px', alignItems: 'center' }}>
+          {/* Left Content */}
+          <div>
+            <h2 style={{ fontSize: '56px', fontWeight: 900, color: 'white', lineHeight: 1.2, margin: 0 }}>
+              Certificazioni Linguistiche
+            </h2>
+          </div>
+
+          {/* Center - Image */}
+          <div style={{ overflow: 'hidden', borderRadius: '24px', height: '500px', backgroundImage: 'url(/Certificazioni%20Linguistiche.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          </div>
+
+          {/* Right Content */}
+          <div>
+            <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'white', marginBottom: '40px' }}>
+              Dal 2024 il Montini ha il vanto di essere sede di preparazione e sede d'esame per gli Esami del Cambridge.
+            </p>
+            <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#34b8fe', color: '#000', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}>
               Scopri di più
               <span style={{ fontSize: '20px' }}>→</span>
             </a>
