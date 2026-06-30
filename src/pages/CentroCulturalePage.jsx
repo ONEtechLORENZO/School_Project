@@ -33,17 +33,36 @@ export default function CentroCulturalePage() {
         </div>
       </section>
 
-      <section style={{ backgroundColor: 'white', padding: '80px', minHeight: 'auto' }}>
-        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '32px', fontWeight: 900, color: '#001839', marginBottom: '30px' }}>
-            Chi siamo
-          </h2>
-          <p style={{ fontSize: '15px', lineHeight: 1.7, color: '#100f2c', marginBottom: '20px' }}>
-            Il Centro culturale Don Carlo Calori è un'istituzione educativa e culturale dell'Istituto G.B. Montini, dedicata alla promozione della cultura, della ricerca e del dialogo.
-          </p>
-          <p style={{ fontSize: '15px', lineHeight: 1.7, color: '#100f2c' }}>
-            Scopri di più sul nostro centro culturale e le iniziative che promuoviamo.
-          </p>
+      {/* Viaggi Studio Block */}
+      <section style={{ backgroundColor: '#0078bd', padding: '80px', minHeight: 'auto' }}>
+        <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '60px', alignItems: 'center' }}>
+          {/* Left Content */}
+          <div>
+            <p style={{ color: 'white', fontSize: '14px', fontWeight: 600, letterSpacing: '2px', margin: 0, marginBottom: '16px', textTransform: 'uppercase' }}>
+              VIAGGI STUDIO
+            </p>
+            <h2 style={{ fontSize: '48px', fontWeight: 900, color: 'white', lineHeight: 1.2, margin: 0 }}>
+              I Viaggi Studio del liceo classico
+            </h2>
+          </div>
+
+          {/* Center - Image */}
+          <div style={{ overflow: 'hidden', borderRadius: '20px', height: '400px', backgroundImage: 'url(/viaggi%20studio.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          </div>
+
+          {/* Right Content */}
+          <div>
+            <p style={{ fontSize: '15px', lineHeight: 1.7, color: 'white', marginBottom: '30px' }}>
+              I viaggi di istruzione al Montini sono molto più di semplici gite: sono esperienze che <strong>aprono la mente, avvicinano alla cultura e trasformano lo studio in scoperta</strong>. Scoprire nuovi luoghi insieme significa crescere, imparare e creare ricordi che restano per sempre.
+            </p>
+            <p style={{ fontSize: '15px', lineHeight: 1.7, color: 'white', marginBottom: '30px' }}>
+              Al Montini, la scuola si vive fuori e dentro l'aula.
+            </p>
+            <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#001839', color: 'white', padding: '12px 32px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '14px', cursor: 'pointer' }}>
+              Scopri di più
+              <span style={{ fontSize: '18px' }}>→</span>
+            </a>
+          </div>
         </div>
       </section>
 
