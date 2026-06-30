@@ -12,6 +12,7 @@ import DocentiPage from './pages/DocentiPage'
 import DocentiDetailPage from './pages/DocentiDetailPage'
 import LiceoClassicoPage from './pages/LiceoClassicoPage'
 import LinguisticoPage from './pages/LinguisticoPage'
+import MaterialiScolasticiPage from './pages/MaterialiScolasticiPage'
 import CentroCulturalePage from './pages/CentroCulturalePage'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -73,6 +74,7 @@ function App() {
       <Route path="/docenti/:slug" element={<DocentiDetailPage />} />
       <Route path="/liceo-classico-montini" element={<LiceoClassicoPage />} />
       <Route path="/linguistico-economico-giuridico" element={<LinguisticoPage />} />
+      <Route path="/materiali-scolastici" element={<MaterialiScolasticiPage />} />
       <Route path="/centro-culturale-don-carlo-calori" element={<CentroCulturalePage />} />
     </Routes>
   )

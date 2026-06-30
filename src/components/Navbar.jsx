@@ -130,6 +130,8 @@ export default function Navbar() {
                       ? <Link key={sub} to="/liceo-classico-montini">{sub}</Link>
                       : sub === 'Linguistico economico giuridico'
                       ? <Link key={sub} to="/linguistico-economico-giuridico">{sub}</Link>
+                      : sub === 'Materiali scolastici'
+                      ? <Link key={sub} to="/materiali-scolastici">{sub}</Link>
                       : sub === 'Centro culturale don Carlo Calori'
                       ? <Link key={sub} to="/centro-culturale-don-carlo-calori">{sub}</Link>
                       : <a key={sub} href="#">{sub}</a>
