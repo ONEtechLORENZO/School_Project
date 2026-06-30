@@ -110,14 +110,14 @@ export default function LinguisticoPage() {
         </div>
       </section>
 
-      {/* Libri di Testo Block */}
+      {/* Materiali Scolastici Block */}
       <section style={{ backgroundColor: '#001839', padding: '80px', minHeight: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <div style={{ maxWidth: '600px' }}>
           <p style={{ color: '#0078bd', fontSize: '14px', fontWeight: 600, letterSpacing: '2px', margin: 0, marginBottom: '16px', textTransform: 'uppercase' }}>
-            LIBRI DI TESTO
+            MATERIALI SCOLASTICI
           </p>
           <h2 style={{ fontSize: '48px', fontWeight: 900, color: 'white', lineHeight: 1.2, margin: 0 }}>
-            I libri di testo per il liceo classico
+            Materiali scolastici
           </h2>
         </div>
 
