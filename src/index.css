@@ -58,7 +58,7 @@ a { text-decoration: none; }
   min-width: 260px;
   box-shadow: 0 12px 32px rgba(0,0,0,0.3);
   z-index: 2000;
-  overflow: hidden;
+  overflow: visible;
   padding-top: 4px;
 }
 .dropdown-menu a {

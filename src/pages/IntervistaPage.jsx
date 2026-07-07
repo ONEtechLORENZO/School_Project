@@ -36,7 +36,7 @@ export default function IntervistaPage() {
       {/* Q&A SECTIONS */}
       <section className="intervista-qa">
         {/* QUESTION 1 */}
-        <div className="qa-block">
+        <div className="qa-block" style={{ background: 'linear-gradient(rgba(52,184,254,0.5), rgba(52,184,254,0.5)), url(/School.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className="qa-icon">
             <i className="fas fa-building"></i>
           </div>
@@ -62,7 +62,7 @@ export default function IntervistaPage() {
         </div>
 
         {/* QUESTION 3 */}
-        <div className="qa-block qa-block-family">
+        <div className="qa-block qa-block-family" style={{ background: 'linear-gradient(rgba(52,184,254,0.5), rgba(52,184,254,0.5)), url(/Family.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className="qa-icon">
             <i className="fas fa-hands-helping"></i>
           </div>
@@ -88,7 +88,7 @@ export default function IntervistaPage() {
         </div>
 
         {/* QUESTION 5 */}
-        <div className="qa-block qa-block-futuro">
+        <div className="qa-block qa-block-futuro" style={{ background: 'linear-gradient(rgba(52,184,254,0.5), rgba(52,184,254,0.5)), url(/Guardando%20al%20futuro.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className="qa-icon">
             <i className="fas fa-cross"></i>
           </div>

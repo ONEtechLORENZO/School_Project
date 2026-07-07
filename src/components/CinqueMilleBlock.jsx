@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import cahtuto from '../assets/cahtuto.png'
 import cinquemilleBg from '../assets/cinquemille-bg.png'
 
@@ -41,7 +42,7 @@ export default function CinqueMilleBlock() {
           <strong>Il codice da indicare è 03546070156</strong>
         </p>
 
-        <a href="#" className="cinquemille-btn">Scopri di più &nbsp;→</a>
+        <Link to="/5x1000" className="cinquemille-btn">Scopri di più &nbsp;→</Link>
       </div>
     </section>
   )
