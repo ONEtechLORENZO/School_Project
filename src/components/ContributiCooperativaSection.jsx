@@ -20,7 +20,16 @@ export default function ContributiCooperativaSection() {
 
           <p>A tal fine si chiede ai genitori al primo anno di firmare un patto di corresponsabilita a suggellare impegno della famiglia nel supporto al Montini</p>
 
-          <p>Patto di corresponsabilità link da leggere</p>
+          <p>
+            <a
+              href="https://docs.google.com/document/d/1YEa8EPlgOqyJA2uwyvGjnCsau3nvlSWg/edit"
+              target="_blank"
+              rel="noreferrer"
+              style={{ color: '#000', fontWeight: 700, textDecoration: 'underline' }}
+            >
+              Patto di corresponsabilità link da leggere
+            </a>
+          </p>
         </div>
       </div>
       <div className="contributi-coop-right">

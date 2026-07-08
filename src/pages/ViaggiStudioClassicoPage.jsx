@@ -26,7 +26,10 @@ export default function ViaggiStudioClassicoPage() {
             {[
               { title: 'Sicilia 2025', slug: 'sicilia-2025' },
               { title: 'Dublino 2025', slug: 'dublino-2025' },
-              { title: 'Cammino di Dante 2025', slug: 'cammino-dante-2025' }
+              { title: 'Cammino di Dante 2025', slug: 'cammino-dante-2025' },
+              { title: 'Assisi 2023', slug: 'assisi-2023' },
+              { title: 'La IV classico a Teatro', slug: 'la-iv-classico-a-teatro' },
+              { title: 'Viaggio Studio', slug: 'viaggio-studio' }
             ].map((trip, index) => (
               <Link
                 key={index}

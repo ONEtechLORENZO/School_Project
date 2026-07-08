@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import heroBg from '../assets/hero-bg.png'
 
 export default function Hero() {
@@ -20,9 +21,9 @@ export default function Hero() {
         <p className="hero-sub">
           La tua formazione, la nostra missione: verso un futuro brillante.
         </p>
-        <a href="#" className="btn-crimson" style={{ fontSize: '17px', padding: '16px 34px' }}>
-          View Our Program &nbsp;<i className="fas fa-arrow-up-right-from-square" style={{ fontSize: '13px' }}></i>
-        </a>
+        <Link to="/iscrizioni" className="btn-crimson" style={{ fontSize: '17px', padding: '16px 34px' }}>
+          Iscriviti al Montini &nbsp;<i className="fas fa-arrow-up-right-from-square" style={{ fontSize: '13px' }}></i>
+        </Link>
       </div>
     </section>
   )

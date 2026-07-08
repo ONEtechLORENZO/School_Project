@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import ingressoImg from '../assets/ingresso-montini.png'
 
 export default function IngressoBlock() {
@@ -13,14 +14,14 @@ export default function IngressoBlock() {
           </em>
         </p>
         <div className="ingresso-btns">
-          <a href="#" className="ingresso-btn">
+          <Link to="/iscrizioni" className="ingresso-btn">
             <span>SCOPRI DI PIÙ</span>
             <i className="fas fa-arrow-up-right-from-square"></i>
-          </a>
-          <a href="#" className="ingresso-btn">
+          </Link>
+          <Link to="/iscrizioni" className="ingresso-btn">
             <span>PAGINA ISCRIZIONI</span>
             <i className="fas fa-arrow-up-right-from-square"></i>
-          </a>
+          </Link>
         </div>
       </div>
 

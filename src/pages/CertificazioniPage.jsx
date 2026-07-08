@@ -49,7 +49,7 @@ export default function CertificazioniPage() {
             <p style={{ fontSize: '16px', lineHeight: 1.8, color: '#100f2c', marginBottom: '35px' }}>
               Il Liceo Classico Montini valorizza le lingue con un percorso potenziato e orientato alle certificazioni. Grazie a docenti madrelingua e pratica mirata, gli studenti raggiungono il FIRST con solida preparazione.
             </p>
-            <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#001839', color: 'white', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}>
+            <a href="/certificazioni-linguistiche-classico" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#001839', color: 'white', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}>
               Scopri di più
               <span style={{ fontSize: '20px' }}>→</span>
             </a>
@@ -70,7 +70,7 @@ export default function CertificazioniPage() {
             <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'white', marginBottom: '35px' }}>
               Il Liceo Linguistico garantisce una preparazione mirata alle certificazioni grazie a percorsi strutturati e ore di madrelingua. Gli studenti accedono con sicurezza a FIRST, DELE e DELF, con opzioni avanzate per chi eccelle.
             </p>
-            <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#34b8fe', color: '#000', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}>
+            <a href="/certificazioni-linguistiche-linguistico" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#34b8fe', color: '#000', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}>
               Scopri di più
               <span style={{ fontSize: '20px' }}>→</span>
             </a>
@@ -95,7 +95,7 @@ export default function CertificazioniPage() {
             <p style={{ fontSize: '16px', lineHeight: 1.8, color: '#100f2c', marginBottom: '35px' }}>
               Al Montini il latino non è solo studio: è competenza certificata, innovazione didattica e un ruolo da protagonista a livello regionale e nazionale.
             </p>
-            <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#001839', color: 'white', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}>
+            <a href="/certificazioni-lingua-latina" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#001839', color: 'white', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}>
               Scopri di più
               <span style={{ fontSize: '20px' }}>→</span>
             </a>
@@ -116,7 +116,7 @@ export default function CertificazioniPage() {
             <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'white', marginBottom: '35px' }}>
               Le sperimentazioni al Montini non sono eccezioni: sono la norma. Ogni anno proponiamo progetti innovativi che trasformano la didattica in esperienza concreta e rilevante.
             </p>
-            <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#34b8fe', color: '#000', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}>
+            <a href="/eccellenza-e-sperimentazioni" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#34b8fe', color: '#000', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}>
               Scopri di più
               <span style={{ fontSize: '20px' }}>→</span>
             </a>
@@ -148,7 +148,7 @@ export default function CertificazioniPage() {
             <p style={{ fontSize: '16px', lineHeight: 1.8, color: '#100f2c', marginBottom: '35px' }}>
               Sei un atleta di alto livello e vuoi fare una scuola di alto livello? Al Montini puoi!
             </p>
-            <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#001839', color: 'white', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}>
+            <a href="/progetto-coni-miur" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#001839', color: 'white', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}>
               Scopri di più
               <span style={{ fontSize: '20px' }}>→</span>
             </a>

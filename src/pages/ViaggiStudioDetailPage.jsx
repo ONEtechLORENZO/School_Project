@@ -53,6 +53,40 @@ const tripDetails = {
     content: [
       'Assisi, comunità di Bose (san Masseo). Quindici intrepidi avventurieri affrontano il caldo fiato delle campagne umbre per condividere con i monaci il lavoro negli oliveti, la preghiera nella chiesetta millenaria, e un lieto senso di gratitudine e fraternità.'
     ]
+  },
+  'viaggio-2026': {
+    title: 'Viaggio 2026',
+    published: '17/10/2025',
+    content: [
+      'Contenuto in aggiornamento. I dettagli del Viaggio 2026 saranno pubblicati a breve.'
+    ]
+  },
+  'la-iv-classico-a-teatro': {
+    title: 'La IV classico a Teatro',
+    published: '17/10/2025',
+    content: [
+      'A cookie is a small text file stored via your browser onto your computer or mobile device. Each cookie is unique to your browser and can be used by a website to improve the user experience, such as your user preferences or the contents of your basket.',
+      'The example below makes CSS remove underline from link by adding text-decoration:none;. We set text-decoration values for each of the link states with CSS: only active and hover states have underlines:',
+      { heading: 'June design conferences' },
+      'Happy to announce that we received a number of Gold, Silver and Bronze Clios for our work on Isle of Dogs, The Killing of a Sacred Deer, The Death of Stalin, and It. It was an exciting night, hosted by Carlton from Fresh Prince (yes he did the dance), and the team celebrated and danced all night. We are so proud of this honor and are looking forward to what\'s next.',
+      'There are 4 link states: a:active, a:hover, a:visited, and a:link. To avoid behavior overlapping, these states should go in the following order: a:hover should go after a:link and a:visited. a:active should go after a:hover. To style link, many CSS styling properties can be applied (e.g. CSS backgrounds, CSS color, CSS font-family, CSS text decoration, etc.).',
+      'If the floating element is taller than the element containing it, then the floating element steps out of its container. You can fix this issue with the overflow property. Paired with an auto value, it stretches the container to be big enough for the floating element.',
+      { heading: 'February design conferences' },
+      'While you may not be jet-setting to meet with fellow designers, that doesn\'t mean you won\'t explore or form meaningful connections in 2021. Unlike last year\'s on-the-fly iterations, the digital formats this year intentionally build community and increase inclusivity. For example, many conferences are integrating interactive elements—including live Q&A sessions and roundtables and chatrooms for mingling—as well as end-of-day extras, like post-conference Zoom yoga sessions.'
+    ]
+  },
+  'viaggio-studio': {
+    title: 'Viaggio Studio',
+    published: '17/10/2025',
+    content: [
+      'A cookie is a small text file stored via your browser onto your computer or mobile device. Each cookie is unique to your browser and can be used by a website to improve the user experience, such as your user preferences or the contents of your basket.',
+      'The example below makes CSS remove underline from link by adding text-decoration:none;. We set text-decoration values for each of the link states with CSS: only active and hover states have underlines:',
+      'Happy to announce that we received a number of Gold, Silver and Bronze Clios for our work on Isle of Dogs, The Killing of a Sacred Deer, The Death of Stalin, and It. It was an exciting night, hosted by Carlton from Fresh Prince (yes he did the dance), and the team celebrated and danced all night. We are so proud of this honor and are looking forward to what\'s next.',
+      { heading: 'Subtitle' },
+      'There are 4 link states: a:active, a:hover, a:visited, and a:link. To avoid behavior overlapping, these states should go in the following order: a:hover should go after a:link and a:visited. a:active should go after a:hover. To style link, many CSS styling properties can be applied (e.g. CSS backgrounds, CSS color, CSS font-family, CSS text decoration, etc.).',
+      'If the floating element is taller than the element containing it, then the floating element steps out of its container. You can fix this issue with the overflow property. Paired with an auto value, it stretches the container to be big enough for the floating element.',
+      'While you may not be jet-setting to meet with fellow designers, that doesn\'t mean you won\'t explore or form meaningful connections in 2021. Unlike last year\'s on-the-fly iterations, the digital formats this year intentionally build community and increase inclusivity. For example, many conferences are integrating interactive elements—including live Q&A sessions and roundtables and chatrooms for mingling—as well as end-of-day extras, like post-conference Zoom yoga sessions.'
+    ]
   }
 }
 
@@ -93,10 +127,16 @@ export default function ViaggiStudioDetailPage() {
           </p>
 
           <div style={{ fontSize: '16px', lineHeight: 1.8, color: '#333', maxWidth: '900px' }}>
-            {trip.content.map((paragraph, index) => (
-              <p key={index} style={{ marginBottom: '24px' }}>
-                {paragraph}
-              </p>
+            {trip.content.map((item, index) => (
+              typeof item === 'object' && item.heading ? (
+                <h2 key={index} style={{ fontSize: '28px', fontWeight: 900, color: '#001839', margin: '36px 0 16px 0' }}>
+                  {item.heading}
+                </h2>
+              ) : (
+                <p key={index} style={{ marginBottom: '24px' }}>
+                  {item}
+                </p>
+              )
             ))}
           </div>
         </div>

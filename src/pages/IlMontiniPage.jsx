@@ -27,7 +27,7 @@ export default function IlMontiniPage() {
       >
         <div className="hero-content">
           <p className="hero-eyebrow">Istituto G.B. Montini</p>
-          <h1 style={{ whiteSpace: 'nowrap', overflow: 'visible' }}><span style={{ backgroundColor: '#8B0A2A', color: 'white', padding: '12px 24px', display: 'inline-block', marginRight: '12px' }}>Il Montini</span> ieri e oggi</h1>
+          <h1 style={{ whiteSpace: 'nowrap', overflow: 'visible' }}><span style={{ backgroundColor: '#001839', color: 'white', padding: '12px 24px', display: 'inline-block', marginRight: '12px' }}>Il Montini</span> ieri e oggi</h1>
           <p className="hero-sub">Il Liceo Montini unisce educazione cattolica, qualità e accessibilità, offrendo formazione culturale e spirituale aperta a tutti.</p>
         </div>
       </section>

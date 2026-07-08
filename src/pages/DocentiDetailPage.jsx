@@ -161,7 +161,7 @@ export default function DocentiDetailPage() {
         <Navbar />
         <section style={{ padding: '100px 80px', minHeight: '600px', backgroundColor: 'var(--navy)', color: 'white', textAlign: 'center' }}>
           <h1>Docente non trovato</h1>
-          <button onClick={() => navigate('/docenti')} style={{ marginTop: '20px', padding: '12px 24px', backgroundColor: '#8B0A2A', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontSize: '16px' }}>
+          <button onClick={() => navigate('/docenti')} style={{ marginTop: '20px', padding: '12px 24px', backgroundColor: '#001839', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontSize: '16px' }}>
             Torna alla lista docenti
           </button>
         </section>
@@ -222,7 +222,7 @@ export default function DocentiDetailPage() {
             style={{
               marginTop: '50px',
               padding: '12px 32px',
-              backgroundColor: '#8B0A2A',
+              backgroundColor: '#001839',
               color: 'white',
               border: 'none',
               borderRadius: '8px',

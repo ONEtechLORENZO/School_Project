@@ -140,7 +140,7 @@ export default function ChiSiamoPage() {
               Carlo Calori (1932-2006), sacerdote e docente milanese, ha fondato scuole, istituti culturali e associazioni educative, promuovendo attività culturali e formative.
             </p>
             <a
-              href="/il-montini-ieri-e-oggi"
+              href="/centro-culturale-don-carlo-calori"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',

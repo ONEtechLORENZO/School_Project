@@ -18,9 +18,9 @@ export default function DL73Page() {
 
   const details = [
     { label: 'a)', text: 'l\'organizzazione interna, con particolare riferimento all\'articolazione degli uffici e all\'organigramma;', link: 'https://drive.google.com/file/d/1leS0vvYNLkFn9FGKN04Dldzxyf4tuRxb/view?usp=drive_link' },
-    { label: 'b)', text: 'le informazioni relative ai titolari di incarichi di collaborazione o consulenza compresi gli estremi dell\'atto di conferimento dell\'incarico, il curriculum vitae e il compenso erogato;', link: 'https://liceo.istitutomontini.it/informazioni-titolari-di-incarichi-di-collaborazione-o-consulenza' },
+    { label: 'b)', text: 'le informazioni relative ai titolari di incarichi di collaborazione o consulenza compresi gli estremi dell\'atto di conferimento dell\'incarico, il curriculum vitae e il compenso erogato;', link: '/' },
     { label: 'c)', text: 'il conto annuale del personale e delle relative spese sostenute;', link: 'https://drive.google.com/file/d/1fD8HqIFvZoh3U4TxeGlhj3jX1x8wXOY9/view?usp=drive_link' },
-    { label: 'd)', text: 'i dati relativi al personale in servizio con contratto di lavoro non a tempo indeterminato;', link: 'https://liceo.istitutomontini.it/dati-personale-con-contratto-di-lavoro-non-tempo-indeterminato' },
+    { label: 'd)', text: 'i dati relativi al personale in servizio con contratto di lavoro non a tempo indeterminato;', link: '/' },
     { label: 'e)', text: 'i documenti e gli allegati del bilancio preventivo e del conto consuntivo;', link: 'https://drive.google.com/file/d/1JkWZc7PDHo84iWtq4j2ijWOKOHAZARxZ/view?usp=drive_link' },
     { label: 'f)', text: 'le informazioni relative ai beni immobili e agli atti di gestione del patrimonio.', link: 'https://drive.google.com/file/d/169upIiB0j3EMPiKiq9AlwPzhPl7-q4Al/view?usp=drive_link' }
   ]

@@ -27,7 +27,7 @@ export default function ParoleRettorePage() {
           <h2 className="parole-rettore-title">Le parole del rettore</h2>
           <p className="hero-eyebrow" style={{ marginTop: '40px' }}>In preparazione alla Pasqua</p>
           <h1 style={{ marginTop: '60px', fontSize: '72px', fontWeight: 900, lineHeight: 1.1 }}>
-            RESPIRARE <span style={{ backgroundColor: '#8B0A2A', color: 'white', padding: '12px 24px', display: 'inline-block' }}>IN DIO</span>
+            RESPIRARE <span style={{ backgroundColor: '#001839', color: 'white', padding: '12px 24px', display: 'inline-block' }}>IN DIO</span>
           </h1>
           <p className="hero-sub">Francesco e le Laudi di Dio altissimo</p>
         </div>

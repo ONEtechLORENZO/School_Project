@@ -30,7 +30,7 @@ export default function IscrzionePromessaBlock() {
           <p>Formule diverse di pagamento sono altresì accettate (carte di credito o bonifici) così come schemi di dilazione dei pagamenti più frequenti, ma sono da concordare con la segreteria amministrativa.</p>
         </div>
 
-        <a href="#" className="iscrizione-promessa-button">LEGGI TUTTO</a>
+        <a href="https://docs.google.com/document/d/1YEa8EPlgOqyJA2uwyvGjnCsau3nvlSWg/edit" target="_blank" rel="noreferrer" className="iscrizione-promessa-button">LEGGI TUTTO</a>
       </div>
     </div>
   )

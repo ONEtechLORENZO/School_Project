@@ -160,7 +160,14 @@ export default function Navbar() {
       <nav className="topbar-nav">
         {navItems.map((item, i) =>
           item.path && !item.dropdown ? (
-            <Link key={item.label} to={item.path} className="nav-home-link">{item.label}</Link>
+            <Link
+              key={item.label}
+              to={item.path}
+              className="nav-home-link"
+              style={item.label === 'Contattaci' ? { color: '#34b8fe' } : undefined}
+            >
+              {item.label}
+            </Link>
           ) : item.dropdown ? (
             <div
               key={item.label}

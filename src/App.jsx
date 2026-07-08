@@ -46,6 +46,8 @@ import ProgettoConiMiurPage from './pages/ProgettoConiMiurPage'
 import CertificazioniClassicoPage from './pages/CertificazioniClassicoPage'
 import CertificazioniLinguisticoPage from './pages/CertificazioniLinguisticoPage'
 import CinqueMillePage from './pages/CinqueMillePage'
+import CertificazioniLatinaPage from './pages/CertificazioniLatinaPage'
+import EventoTerraSantaPage from './pages/EventoTerraSantaPage'
 import LiceoClassicoNuoviLinguaggiPage from './pages/LiceoClassicoNuoviLinguaggiPage'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -73,9 +75,9 @@ function HomePage() {
     <>
       <Navbar />
       <Hero />
+      <NotizieSection />
       <LogoBar />
       <MissionBanner />
-      <NotizieSection />
       <IngressoBlock />
       <CalendarioBlock />
       <InstagramSection />
@@ -148,6 +150,8 @@ function App() {
       <Route path="/certificazioni-linguistiche-classico" element={<CertificazioniClassicoPage />} />
       <Route path="/certificazioni-linguistiche-linguistico" element={<CertificazioniLinguisticoPage />} />
       <Route path="/5x1000" element={<CinqueMillePage />} />
+      <Route path="/certificazioni-lingua-latina" element={<CertificazioniLatinaPage />} />
+      <Route path="/eventi/esperienza-estiva-terra-santa" element={<EventoTerraSantaPage />} />
       <Route path="/materiali-scolastici" element={<MaterialiScolasticiPage />} />
       <Route path="/certificazioni-e-sperimentazioni" element={<CertificazioniPage />} />
       <Route path="/le-nostre-iniziative" element={<LeNostreIniziativePage />} />

@@ -15,7 +15,7 @@ export default function LinguisticoPage() {
       <section
         className="hero"
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.35) 100%), url(/Linguistico%20economico%20giuridico.png)`,
+          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.35) 100%), url(/LiceoLinguistico.jfif)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center 75%',
           backgroundRepeat: 'no-repeat',
@@ -50,7 +50,7 @@ export default function LinguisticoPage() {
             <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'white', marginBottom: '35px' }}>
               Un percorso moderno che unisce lingue, economia e diritto, esperienze internazionali e progetti concreti, per costruire competenze reali e aprire le porte a università e carriera.
             </p>
-            <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#34b8fe', color: '#000', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}>
+            <a href="/perche-il-linguistico" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#34b8fe', color: '#000', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}>
               Scopri di più
               <span style={{ fontSize: '20px' }}>→</span>
             </a>
@@ -149,7 +149,7 @@ export default function LinguisticoPage() {
             <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'white', marginBottom: '40px' }}>
               Al Montini, la scuola si vive fuori e dentro l'aula.
             </p>
-            <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#001839', color: 'white', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}>
+            <a href="/viaggi-studio-classico" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#001839', color: 'white', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}>
               Scopri di più
               <span style={{ fontSize: '20px' }}>→</span>
             </a>
@@ -176,7 +176,7 @@ export default function LinguisticoPage() {
             <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'white', marginBottom: '40px' }}>
               Dal 2024 il Montini ha il vanto di essere sede di preparazione e sede d'esame per gli Esami del Cambridge.
             </p>
-            <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#34b8fe', color: '#000', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}>
+            <a href="/cambridge-exam-center" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#34b8fe', color: '#000', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}>
               Scopri di più
               <span style={{ fontSize: '20px' }}>→</span>
             </a>

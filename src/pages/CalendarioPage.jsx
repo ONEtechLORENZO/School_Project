@@ -18,7 +18,7 @@ export default function CalendarioPage() {
       day: '26',
       title: 'Esperienza estiva in Terra Santa',
       allDay: true,
-      link: '#'
+      link: '/eventi/esperienza-estiva-terra-santa'
     }
   ]
 
@@ -41,6 +41,24 @@ export default function CalendarioPage() {
           <h1 style={{ fontSize: '52px' }}>
             <span style={{ backgroundColor: '#001839', color: 'white', padding: '12px 24px', display: 'inline-block', marginRight: '8px' }}>Calendario &</span> Notizie
           </h1>
+        </div>
+      </section>
+
+      {/* Comunicazioni Section */}
+      <section style={{ backgroundColor: 'white', padding: '120px 80px 0 80px', minHeight: 'auto' }}>
+        <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: '32px', fontWeight: 900, color: '#001839', marginBottom: '20px', marginTop: 0, textTransform: 'uppercase' }}>
+            Comunicazioni
+          </h2>
+          <p style={{ fontSize: '16px', color: '#333', lineHeight: 1.8, marginBottom: '30px', maxWidth: '800px' }}>
+            Hai bisogno di informazioni o supporto? Contattaci: ti risponderemo il prima possibile.
+          </p>
+          <Link
+            to="/contattaci"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#34b8fe', color: '#001839', padding: '12px 28px', borderRadius: '24px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}
+          >
+            Contattaci
+          </Link>
         </div>
       </section>
 
@@ -114,45 +132,36 @@ export default function CalendarioPage() {
       {/* Notizie Section */}
       <section style={{ backgroundColor: '#001839', padding: '120px 80px', minHeight: 'auto' }}>
         <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'center', marginBottom: '60px' }}>
+          <div style={{ marginBottom: '60px' }}>
             <h2 style={{ fontSize: '32px', fontWeight: 900, color: 'white', margin: 0, textTransform: 'uppercase' }}>
               Notizie
             </h2>
-            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-              <a
-                href="/categoria/notizie"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#34b8fe', color: '#001839', padding: '14px 36px', borderRadius: '24px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}
-              >
-                Vedi tutte
-                <span style={{ fontSize: '20px' }}>→</span>
-              </a>
-            </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '30px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px' }}>
             {[
               { title: 'Montiniadi 2026', date: '08/04/2026', readTime: '1 min read', image: 'Montiniadi 2026.png', link: '/montiniadi-2026' },
               { title: 'Centro Culturale Don Carlo Calori - 50 Anni di Montini', date: '08/04/2026', readTime: '1 min read', image: 'Centro Culturale Don Carlo Calori - 50 Anni di Montini.png', link: '/centro-culturale-50-anni' },
             ].map((article, index) => (
               <Link key={index} to={article.link} style={{ textDecoration: 'none', cursor: 'pointer' }}>
-                <div style={{ cursor: 'pointer' }}>
-                  <div
-                    style={{
-                      height: '480px',
-                      backgroundImage: `url(/${encodeURIComponent(article.image).replace(/%20/g, '%20')})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      borderRadius: '12px',
-                      marginBottom: '20px'
-                    }}
-                  ></div>
-                  <div style={{ fontSize: '12px', color: '#999', marginBottom: '8px' }}>
-                    {article.date} · {article.readTime}
-                  </div>
-                  <h3 style={{ fontSize: '18px', fontWeight: 900, color: 'white', margin: 0, lineHeight: 1.4 }}>
-                    {article.title}
-                  </h3>
+                <div
+                  style={{
+                    height: '480px',
+                    borderRadius: '12px',
+                    cursor: 'pointer',
+                    backgroundImage: `url(/${encodeURIComponent(article.image)})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    marginBottom: '20px'
+                  }}
+                ></div>
+                <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.6)', marginBottom: '8px' }}>
+                  {article.date} · {article.readTime}
                 </div>
+                <h3 style={{ fontSize: '18px', fontWeight: 900, color: 'white', margin: 0, lineHeight: 1.4 }}>
+                  {article.title}
+                </h3>
               </Link>
             ))}
           </div>

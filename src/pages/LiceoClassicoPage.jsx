@@ -46,7 +46,7 @@ export default function LiceoClassicoPage() {
             </p>
           </div>
 
-          <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#001839', color: 'white', padding: '12px 24px', borderRadius: '6px', marginTop: '30px', textDecoration: 'none', fontWeight: 600, fontSize: '14px', cursor: 'pointer' }}>
+          <a href="/perche-il-classico-montini" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#001839', color: 'white', padding: '12px 24px', borderRadius: '6px', marginTop: '30px', textDecoration: 'none', fontWeight: 600, fontSize: '14px', cursor: 'pointer' }}>
             SCOPRI DI PIÙ
             <span style={{ fontSize: '18px' }}>→</span>
           </a>
@@ -65,7 +65,7 @@ export default function LiceoClassicoPage() {
 
         {/* Right Content */}
         <div>
-          <p style={{ color: '#8B0A2A', fontSize: '14px', fontWeight: 600, letterSpacing: '2px', marginBottom: '12px', margin: 0, textTransform: 'uppercase' }}>
+          <p style={{ color: '#001839', fontSize: '14px', fontWeight: 600, letterSpacing: '2px', marginBottom: '12px', margin: 0, textTransform: 'uppercase' }}>
             LICEO CLASSICO NUOVI LINGUAGGI
           </p>
           <h2 style={{ fontSize: '32px', fontWeight: 900, color: '#001839', lineHeight: 1.25, marginBottom: '40px', marginTop: 0, textTransform: 'uppercase' }}>
@@ -76,7 +76,7 @@ export default function LiceoClassicoPage() {
               Liceo classico con potenziamento media e comunicazione.
             </p>
           </div>
-          <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#001839', color: 'white', padding: '12px 24px', borderRadius: '6px', marginTop: '30px', textDecoration: 'none', fontWeight: 600, fontSize: '14px', cursor: 'pointer' }}>
+          <a href="/liceo-classico-nuovi-linguaggi" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#001839', color: 'white', padding: '12px 24px', borderRadius: '6px', marginTop: '30px', textDecoration: 'none', fontWeight: 600, fontSize: '14px', cursor: 'pointer' }}>
             SCOPRI DI PIÙ
             <span style={{ fontSize: '18px' }}>→</span>
           </a>
@@ -146,7 +146,7 @@ export default function LiceoClassicoPage() {
           </h2>
         </div>
 
-        <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#34b8fe', color: '#000', padding: '12px 32px', borderRadius: '30px', textDecoration: 'none', fontWeight: 600, fontSize: '14px', cursor: 'pointer', whiteSpace: 'nowrap' }}>
+        <a href="/materiali-scolastici" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#34b8fe', color: '#000', padding: '12px 32px', borderRadius: '30px', textDecoration: 'none', fontWeight: 600, fontSize: '14px', cursor: 'pointer', whiteSpace: 'nowrap' }}>
           Scopri di più
           <span style={{ fontSize: '18px' }}>→</span>
         </a>
@@ -177,7 +177,7 @@ export default function LiceoClassicoPage() {
             <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'white', marginBottom: '40px' }}>
               Al Montini, la scuola si vive fuori e dentro l'aula.
             </p>
-            <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#001839', color: 'white', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}>
+            <a href="/viaggi-studio-classico" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', backgroundColor: '#001839', color: 'white', padding: '14px 36px', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '15px', cursor: 'pointer' }}>
               Scopri di più
               <span style={{ fontSize: '20px' }}>→</span>
             </a>

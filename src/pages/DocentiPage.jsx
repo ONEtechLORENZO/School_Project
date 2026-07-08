@@ -31,7 +31,7 @@ export default function DocentiPage() {
         <div className="hero-content" style={{ maxWidth: '900px' }}>
           <p className="hero-eyebrow">Istituto G.B. Montini</p>
           <h1 style={{ fontSize: '52px' }}>
-            <span style={{ backgroundColor: '#8B0A2A', color: 'white', padding: '12px 24px', display: 'inline-block', marginRight: '8px' }}>I docenti</span>
+            <span style={{ backgroundColor: '#001839', color: 'white', padding: '12px 24px', display: 'inline-block', marginRight: '8px' }}>I docenti</span>
             dell'Istituto
           </h1>
           <h1 style={{ fontSize: '52px', marginTop: '4px' }}>

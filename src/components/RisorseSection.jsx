@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom'
+
 const links = [
-  'Supporto agli studenti',
-  'Regolamenti e documenti',
-  'Certificazioni',
-  'Materiali scolastici',
-  'Offerta formativa',
+  { label: 'Supporto agli studenti', path: '/supporto-agli-studenti' },
+  { label: 'Regolamenti e documenti', path: '/regolamento' },
+  { label: 'Certificazioni', path: '/certificazioni-e-sperimentazioni' },
+  { label: 'Materiali scolastici', path: '/materiali-scolastici' },
+  { label: 'Offerta formativa', path: '/liceo-classico-montini' },
 ]
 
 export default function RisorseSection() {
@@ -26,15 +28,15 @@ export default function RisorseSection() {
         <h2 className="risorse-heading">Tutto ciò di cui<br />hai bisogno</h2>
         <ul className="risorse-links">
           {links.map((link) => (
-            <li key={link}>
-              <a href="#">
-                <span>{link}</span>
+            <li key={link.label}>
+              <Link to={link.path}>
+                <span>{link.label}</span>
                 <i className="fas fa-arrow-right"></i>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
-        <a href="#" className="risorse-btn">SCOPRI DI PIÙ</a>
+        <Link to="/supporto-agli-studenti" className="risorse-btn">SCOPRI DI PIÙ</Link>
       </div>
 
     </section>

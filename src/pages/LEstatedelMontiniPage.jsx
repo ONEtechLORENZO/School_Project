@@ -60,7 +60,7 @@ export default function LEstatedelMontiniPage() {
                 style={{ textDecoration: 'none' }}
               >
                 <div
-                  style={{ backgroundColor: '#001839', borderRadius: '12px', padding: '40px 20px', minHeight: '480px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', cursor: 'pointer', transition: 'transform 0.2s', color: 'white', height: '100%', backgroundImage: card.slug === 'cracovia-2016' ? 'url(/Cracovia%202016%20%282%29%20copy.png)' : (card.image ? `url(/${card.image})` : `url(/${encodeURIComponent(card.title)}.png)`), backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
+                  style={{ backgroundColor: '#001839', borderRadius: '12px', padding: '40px 20px', minHeight: '480px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', cursor: 'pointer', transition: 'transform 0.2s', color: 'white', height: '100%', backgroundImage: card.slug === 'cracovia-2016' ? 'url(/Cracovia%202016%20%282%29%20copy.png)' : (card.image ? `url(/${encodeURIComponent(card.image)})` : `url(/${encodeURIComponent(card.title)}.png)`), backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
                 >
                   <div style={{ height: '80px', marginBottom: '20px' }}></div>
                   <div>

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function ChiSiamoSection() {
   return (
     <section className="chi-siamo">
@@ -21,9 +23,9 @@ export default function ChiSiamoSection() {
           <li>Un'avventura educativa: tutti per mano e una mano per tutti!</li>
         </ul>
         <div className="chi-siamo-cta">
-          <a href="#" className="chi-siamo-btn">
+          <Link to="/chi-siamo" className="chi-siamo-btn">
             Scopri di più
-          </a>
+          </Link>
           <div className="chi-siamo-contact">
             <i className="fas fa-phone-volume"></i>
             <div>
