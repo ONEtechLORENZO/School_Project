@@ -47,8 +47,8 @@ export default function Footer() {
           <h5 className="footer-col-subtitle" style={{ marginTop: '20px' }}>Social Media</h5>
           <ul className="footer-links">
             <li><a href="https://www.instagram.com/istitutomontini/" target="_blank" rel="noreferrer">Instagram</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">YouTube</a></li>
+            <li><a href="https://www.facebook.com/Istituto.Montini/?locale=it_IT" target="_blank" rel="noreferrer">Facebook</a></li>
+            <li><a href="https://www.youtube.com/@istitutog.b.montini8772" target="_blank" rel="noreferrer">YouTube</a></li>
           </ul>
         </div>
 

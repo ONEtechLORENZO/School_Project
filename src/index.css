@@ -20,7 +20,8 @@ a { text-decoration: none; }
   top: 0;
   z-index: 1000;
 }
-.topbar-social { display: flex; gap: 18px; }
+.topbar-social { display: flex; gap: 18px; align-items: center; }
+.topbar-logo { display: flex; align-items: center; margin-right: 4px; }
 .topbar-social a { color: rgba(255,255,255,0.85); font-size: 14px; transition: color .2s; }
 .topbar-social a:hover { color: white; }
 .topbar-nav { display: flex; align-items: center; gap: 18px; }
@@ -3166,4 +3167,261 @@ a { text-decoration: none; }
   color: white;
   margin: 0;
   line-height: 1.3;
+}
+
+/* ============================================================
+   RESPONSIVE / MOBILE OPTIMIZATION
+   ============================================================ */
+
+/* Never allow horizontal scroll; images always fit */
+html, body { overflow-x: hidden; max-width: 100%; }
+img { max-width: 100%; }
+
+/* Mobile hamburger is hidden on desktop */
+.topbar-hamburger { display: none; }
+.topbar-mobile-menu { display: none; }
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+  .footer-main { grid-template-columns: 1fr 1fr; gap: 40px; padding: 56px 32px; }
+  .mission-logo { padding-left: 0; }
+  .mission-text { padding-right: 0; }
+}
+
+/* ---------- Mobile (≤ 768px) ---------- */
+@media (max-width: 768px) {
+  /* --- Navbar: swap horizontal nav for hamburger --- */
+  .topbar { padding: 0 16px; height: 52px; }
+  /* Keep the school logo visible on mobile, hide the social icons */
+  .topbar-social { display: flex; }
+  .topbar-social a:not(.topbar-logo) { display: none; }
+  .topbar-logo img { height: 32px !important; }
+  .topbar-nav { display: none; }
+  .topbar-hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 8px;
+  }
+  .topbar-mobile-menu {
+    display: block;
+    position: fixed;
+    top: 52px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #001839;
+    z-index: 1500;
+    overflow-y: auto;
+    padding: 8px 0 40px;
+  }
+  .mnav-item > a,
+  .mnav-item > button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px 22px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+  }
+  .mnav-sub { background: rgba(255,255,255,0.04); }
+  .mnav-sub a {
+    display: block;
+    padding: 13px 34px;
+    color: rgba(255,255,255,0.82);
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  /* --- Layout: collapse every inline multi-column grid --- */
+  [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+
+  /* --- Reduce large layout paddings (buttons/small paddings untouched) --- */
+  [style*="padding: 80px"]       { padding: 48px 20px !important; }
+  [style*="padding: 120px 80px"] { padding: 56px 20px !important; }
+  [style*="padding: 100px 80px"] { padding: 56px 20px !important; }
+  [style*="padding: 70px 80px"]  { padding: 44px 20px !important; }
+  [style*="padding: 40px 80px"]  { padding: 32px 20px !important; }
+  [style*="padding: 60px 80px"]  { padding: 40px 20px !important; }
+  [style*="padding: 120px"]      { padding: 56px 20px !important; }
+
+  /* --- Clamp oversized inline headings --- */
+  h1 { font-size: clamp(28px, 8vw, 40px) !important; line-height: 1.15 !important; }
+  h2 { font-size: clamp(22px, 6vw, 30px) !important; line-height: 1.25 !important; }
+  h3 { font-size: clamp(17px, 5vw, 22px) !important; }
+
+  /* --- Hero --- */
+  .hero { min-height: 58vh; padding: 60px 20px !important; }
+  .hero-content { max-width: 100% !important; }
+  .hero h1 { font-size: clamp(28px, 8vw, 42px) !important; white-space: normal !important; }
+  .hero h1 span { display: inline-block; }
+  .hero-sub { font-size: 16px; max-width: 100%; }
+  /* any inline nowrap headings/rows must wrap on mobile */
+  [style*="white-space: nowrap"] { white-space: normal !important; }
+
+  /* --- Mission banner --- */
+  .mission-banner { flex-direction: column; padding: 48px 20px; gap: 26px; text-align: center; }
+  .mission-logo img { width: 130px; height: 130px; }
+  .mission-text p { font-size: 30px; }
+
+  /* --- Footer --- */
+  .footer-main { grid-template-columns: 1fr !important; gap: 34px; padding: 48px 24px; }
+
+  /* --- Collapse EVERY class-based multi-column grid to one column --- */
+  .cta-strip,
+  .notizie-grid,
+  .chi-siamo,
+  .contributi-block,
+  .cinquemille-section,
+  .risorse-section,
+  .calendario-block,
+  .ingresso-block,
+  .about,
+  .campus,
+  .navigate,
+  .nav-grid,
+  .quotes-cards-grid,
+  .testi-body,
+  .iscrizioni-section,
+  .fare-genitore-section,
+  .contributi-coop-section,
+  .educativo-section,
+  .iscrizione-promessa-block,
+  .iscrizione-promessa-images,
+  .dote-scuola-block,
+  .contattaci-info,
+  .contattaci-bottom-grid,
+  .form-row-two,
+  .montini-history-grid,
+  .montini-blocks-container,
+  .intervista-container,
+  .qa-block,
+  .parole-content-block,
+  .parole-content-block-navy,
+  .parole-leone-block,
+  .parole-sapienza-container,
+  .parole-conclusione-block,
+  .audio-players-container {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  /* --- Normalize section paddings on those blocks --- */
+  .chi-siamo, .risorse-section, .ingresso-block,
+  .about, .campus, .navigate,
+  .iscrizioni-section, .fare-genitore-section, .educativo-section,
+  .iscrizione-promessa-block, .dote-scuola-block,
+  .intervista-content, .montini-history-grid,
+  .parole-content-block, .parole-content-block-navy,
+  .parole-leone-block, .parole-sapienza-container, .parole-conclusione-block {
+    padding: 44px 20px !important;
+  }
+  .cinquemille-section  { padding: 44px 20px !important; }
+  .contributi-block     { padding: 40px 20px !important; }
+  .calendario-block     { padding: 34px 20px !important; }
+  .contributi-coop-section { padding: 40px 20px !important; }
+  .instagram-section    { padding: 40px 20px 48px !important; }
+  .qa-block             { padding: 28px 20px !important; gap: 20px !important; }
+
+  /* --- Kill oversized fixed heights that squash/hide content --- */
+  .intervista-container { min-height: auto !important; }
+  .intervista-image     { min-height: 300px !important; }
+  .iscrizione-promessa-block,
+  .fare-genitore-section,
+  .contributi-coop-section,
+  .educativo-section,
+  .dote-scuola-block { min-height: auto !important; }
+  .testi-collage { height: auto !important; }
+
+  /* qa icon centered above its text */
+  .qa-icon { margin: 0 auto; }
+
+  /* --- Grid children may not shrink below content by default --- */
+  .montini-history-grid > *, .notizie-grid > *, .qa-block > * { min-width: 0; }
+
+  /* --- Logo bar: wrap logos in 2 rows --- */
+  .logo-bar { flex-wrap: wrap; gap: 20px; padding: 28px 20px !important; justify-content: center; }
+  .logo-bar-item { flex: 0 1 40%; }
+  .logo-bar-item img { max-height: 56px; max-width: 100%; }
+
+  /* --- Iscrizioni tabs: wrap and compact --- */
+  .iscrizioni-tab-bar { flex-wrap: wrap; overflow-x: auto; }
+  .iscrizioni-tab { padding: 10px 14px !important; font-size: 13px !important; }
+
+  /* --- Montini history blocks --- */
+  .montini-history-block { padding: 36px 20px !important; min-height: auto !important; }
+  .montini-history-number { font-size: 44px !important; }
+  .montini-history-image { min-height: 0 !important; width: 100%; max-width: 300px; margin: 0 auto; }
+
+  /* --- Contact bar (on every page): stack vertically, was clipped off-screen --- */
+  .contact-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 20px !important;
+    gap: 18px;
+  }
+  .contact-divider { display: none; }
+  .contact-info strong { word-break: break-word; }
+
+  /* --- Oversized decorative section images: shrink to sane mobile size --- */
+  .fare-genitore-right,
+  .educativo-left { min-height: auto !important; }
+  .fare-genitore-right img,
+  .educativo-left img {
+    width: 220px !important;
+    height: 220px !important;
+  }
+  .contributi-coop-right {
+    min-height: auto !important;
+    margin: 0 !important;
+  }
+  .contributi-coop-right img {
+    height: 300px !important;
+    margin-top: 0 !important;
+  }
+  .cinquemille-form-img { max-height: 300px !important; }
+  .testi-main-img { width: 180px !important; height: 240px !important; }
+  .testi-sm-img { width: 90px !important; height: 90px !important; }
+
+  /* Buttons that sit side-by-side → full width & wrap */
+  .ingresso-btns { flex-wrap: wrap; }
+
+  /* Hide decorative-only elements on mobile (declutter) */
+  .chi-siamo-pills,
+  .risorse-left { display: none !important; }
+
+  /* Tall image blocks: cap height so they don't dominate.
+     Uses "; height:" (mid-style) and "^height:" (start-of-style) to avoid
+     ever matching "min-height:" (which cards use). */
+  [style*="; height: 500px"], [style^="height: 500px"],
+  [style*="; height: 460px"], [style^="height: 460px"],
+  [style*="; height: 400px"], [style^="height: 400px"],
+  [style*="; height: 360px"], [style^="height: 360px"],
+  [style*="; height: 340px"], [style^="height: 340px"] { height: 220px !important; }
+
+  /* --- Docenti grid → 2 columns --- */
+  .docenti-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 20px !important; }
+  .docenti-grid-section { padding-left: 20px !important; padding-right: 20px !important; }
+
+  /* --- Sidebar navigation: hide side panels (top navbar covers navigation) --- */
+  .sn-panel, .sn-toggle { display: none !important; }
+}
+
+/* ---------- Small phones (≤ 480px) ---------- */
+@media (max-width: 480px) {
+  .mission-text p { font-size: 25px; }
+  .docenti-grid { grid-template-columns: 1fr !important; }
 }

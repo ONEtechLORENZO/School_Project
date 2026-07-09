@@ -67,6 +67,7 @@ export default function SidebarNavigation({ category }) {
   if (!isOpen) {
     return (
       <button
+        className="sn-toggle"
         onClick={() => setIsOpen(true)}
         style={{
           position: 'fixed',
@@ -92,7 +93,7 @@ export default function SidebarNavigation({ category }) {
   return (
     <>
       {/* Left Sidebar */}
-      <div style={{
+      <div className="sn-panel" style={{
         width: '220px',
         backgroundColor: '#001839',
         padding: '24px 16px',
@@ -148,7 +149,7 @@ export default function SidebarNavigation({ category }) {
       </div>
 
       {/* Right Side Menu */}
-      <div style={{
+      <div className="sn-panel" style={{
         width: '260px',
         backgroundColor: '#f5f5f5',
         padding: '24px 20px',

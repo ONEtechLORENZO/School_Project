@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import schoolLogo from '../assets/school-logo.png'
 
 const navItems = [
   {
@@ -103,12 +104,83 @@ const navItems = [
   },
 ]
 
+// Flat, tap-friendly navigation used only on mobile (hamburger menu).
+const mobileNav = [
+  { label: 'Home', path: '/' },
+  {
+    label: 'Ingresso al Montini',
+    children: [
+      { label: 'Iscrizioni al Montini', path: '/iscrizioni' },
+      { label: 'Contributi economici', path: '/contributi-economici' },
+      { label: 'Regolamento istituto', path: '/regolamento' },
+      { label: 'Pagamenti, IBAN e info bancarie', path: '/pagamenti' },
+    ],
+  },
+  {
+    label: 'Chi siamo',
+    children: [
+      { label: 'Chi siamo', path: '/chi-siamo' },
+      { label: 'Il Montini ieri e oggi', path: '/il-montini-ieri-e-oggi' },
+      { label: 'Intervista a Don Paolo Alliata', path: '/intervista-don-paolo-alliata' },
+      { label: 'Le parole del rettore', path: '/le-parole-del-rettore' },
+      { label: 'Docenti', path: '/docenti' },
+      { label: 'Centro culturale don Carlo Calori', path: '/centro-culturale-don-carlo-calori' },
+    ],
+  },
+  {
+    label: 'Scuola e didattica',
+    children: [
+      { label: 'Liceo Classico', path: '/liceo-classico-montini' },
+      { label: 'Perché il Classico Montini', path: '/perche-il-classico-montini' },
+      { label: 'Liceo classico nuovi linguaggi', path: '/liceo-classico-nuovi-linguaggi' },
+      { label: 'Viaggi Studio – Classico', path: '/viaggi-studio-classico' },
+      { label: 'Linguistico economico giuridico', path: '/linguistico-economico-giuridico' },
+      { label: 'Perché il Linguistico economico giuridico', path: '/perche-il-linguistico' },
+      { label: 'Viaggio Studio – Linguistico', path: '/viaggi-studio-linguistico' },
+      { label: 'Cambridge Exam Center', path: '/cambridge-exam-center' },
+      { label: 'Materiali scolastici', path: '/materiali-scolastici' },
+      { label: 'Certificazioni e sperimentazioni', path: '/certificazioni-e-sperimentazioni' },
+      { label: 'Le nostre iniziative', path: '/le-nostre-iniziative' },
+      { label: 'Supporto agli studenti', path: '/supporto-agli-studenti' },
+      { label: "L'estate del Montini", path: '/l-estate-del-montini' },
+    ],
+  },
+  {
+    label: 'Comunicazioni',
+    children: [
+      { label: 'Colloqui con i genitori', path: '/colloqui-con-i-genitori' },
+      { label: 'Calendario & Notizie', path: '/calendario' },
+    ],
+  },
+  {
+    label: 'Documentazione obbligatoria',
+    children: [
+      { label: 'Documentazione obbligatoria', path: '/documentazione-obbligatoria' },
+      { label: 'DL 73/2021 e sostegni bis', path: '/dl-73-2021-e-sostegni-bis' },
+      { label: 'Contributi pubblici', path: '/contributi-pubblici' },
+      { label: 'Bandi Europei', path: '/bandi-europei' },
+    ],
+  },
+  {
+    label: 'Cooperativa Milano 15',
+    children: [
+      { label: 'Cooperativa Milano 15', path: '/cooperativa-milano-15' },
+      { label: 'Visura cooperativa', path: '/visura-cooperativa' },
+      { label: 'IBAN e pagamenti', path: '/iban-e-pagamenti' },
+      { label: 'Regolamento soci e cooperativa', path: '/regolamento-cooperativa' },
+    ],
+  },
+  { label: 'Contattaci', path: '/contattaci' },
+]
+
 export default function Navbar() {
   const [openIndex, setOpenIndex] = useState(null)
   const [hoveredSubmenu, setHoveredSubmenu] = useState(null)
   const [hoveredNested, setHoveredNested] = useState(null)
   const [dropdownPosition, setDropdownPosition] = useState('center')
   const [submenuPosition, setSubmenuPosition] = useState('right')
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const [mobileExpanded, setMobileExpanded] = useState(null)
   const closeTimers = {}
 
   const handleDropdownRef = (ref, i) => {
@@ -151,10 +223,12 @@ export default function Navbar() {
   return (
     <header className="topbar">
       <div className="topbar-social">
-        <a href="#"><i className="fab fa-facebook-f"></i></a>
-        <a href="#"><i className="fab fa-x-twitter"></i></a>
-        <a href="#"><i className="fab fa-instagram"></i></a>
-        <a href="#"><i className="fab fa-pinterest-p"></i></a>
+        <Link to="/" className="topbar-logo" aria-label="Home">
+          <img src={schoolLogo} alt="Istituto G.B. Montini" style={{ height: '36px', width: 'auto', display: 'block' }} />
+        </Link>
+        <a href="https://www.facebook.com/Istituto.Montini/?locale=it_IT" target="_blank" rel="noreferrer" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/istitutomontini/" target="_blank" rel="noreferrer" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@istitutog.b.montini8772" target="_blank" rel="noreferrer" aria-label="YouTube"><i className="fab fa-youtube"></i></a>
       </div>
 
       <nav className="topbar-nav">
@@ -412,6 +486,44 @@ export default function Navbar() {
 
         )}
       </nav>
+
+      {/* Mobile hamburger */}
+      <button
+        className="topbar-hamburger"
+        aria-label="Menu"
+        onClick={() => setMobileOpen((o) => !o)}
+      >
+        <i className={mobileOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
+      </button>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="topbar-mobile-menu">
+          {mobileNav.map((item) => (
+            <div className="mnav-item" key={item.label}>
+              {item.path && !item.children ? (
+                <Link to={item.path} onClick={() => setMobileOpen(false)}>{item.label}</Link>
+              ) : (
+                <>
+                  <button
+                    onClick={() => setMobileExpanded((e) => (e === item.label ? null : item.label))}
+                  >
+                    <span>{item.label}</span>
+                    <i className={mobileExpanded === item.label ? 'fas fa-chevron-up' : 'fas fa-chevron-down'} style={{ fontSize: '12px' }}></i>
+                  </button>
+                  {mobileExpanded === item.label && (
+                    <div className="mnav-sub">
+                      {item.children.map((c) => (
+                        <Link key={c.label} to={c.path} onClick={() => setMobileOpen(false)}>{c.label}</Link>
+                      ))}
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
 
     </header>
   )
