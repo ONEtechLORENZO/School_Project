@@ -91,6 +91,7 @@ const navItems = [
   {
     label: 'Cooperativa Milano 15',
     dropdown: [
+      'Cooperativa Milano 15',
       'Visura cooperativa',
       'IBAN e pagamenti',
       'Regolamento soci e cooperativa',
@@ -470,6 +471,8 @@ export default function Navbar() {
                         ? <Link key={label} to="/visura-cooperativa">{label}</Link>
                         : label === 'IBAN e pagamenti'
                         ? <Link key={label} to="/iban-e-pagamenti">{label}</Link>
+                        : label === 'Cooperativa Milano 15'
+                        ? <Link key={label} to="/cooperativa-milano-15">{label}</Link>
                         : label === 'Regolamento soci e cooperativa'
                         ? <Link key={label} to="/regolamento-cooperativa">{label}</Link>
                         : label === 'Centro culturale don Carlo Calori'
