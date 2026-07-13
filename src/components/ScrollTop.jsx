@@ -8,12 +8,14 @@ export default function ScrollTop() {
       <Link
         to="/contattaci"
         aria-label="Contattaci"
+        className="fab-contact"
         style={{
           position: 'fixed',
           bottom: '84px',
           right: '28px',
           display: 'inline-flex',
           alignItems: 'center',
+          justifyContent: 'center',
           gap: '8px',
           backgroundColor: '#34b8fe',
           color: '#001839',
@@ -28,7 +30,7 @@ export default function ScrollTop() {
         }}
       >
         <i className="fas fa-phone"></i>
-        Contattaci
+        <span className="fab-contact-label">Contattaci</span>
       </Link>
 
       <button

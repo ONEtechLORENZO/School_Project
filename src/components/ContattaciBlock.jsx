@@ -1,4 +1,24 @@
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
+
+// Fallback recipients if EmailJS isn't configured (opens the visitor's mail app).
+const RECIPIENTS = 'segreteria@istitutomontini.it,fabrizio.fassini@istitutomontini.it'
+
+// ─────────────────────────────────────────────────────────────
+//  EMAILJS CONFIG — paste your 3 IDs from https://emailjs.com here.
+//  Until these are filled, the form falls back to opening the mail app.
+//  Get them at: Email Services (Service ID), Email Templates (Template ID),
+//  Account → API Keys (Public Key).
+// ─────────────────────────────────────────────────────────────
+const EMAILJS = {
+  serviceId: 'YOUR_SERVICE_ID',
+  templateId: 'YOUR_TEMPLATE_ID',
+  publicKey: 'YOUR_PUBLIC_KEY',
+}
+const emailjsReady =
+  !EMAILJS.serviceId.startsWith('YOUR_') &&
+  !EMAILJS.templateId.startsWith('YOUR_') &&
+  !EMAILJS.publicKey.startsWith('YOUR_')
 
 export default function ContattaciBlock() {
   const [formData, setFormData] = useState({
@@ -8,6 +28,9 @@ export default function ContattaciBlock() {
     messaggio: '',
     spam: ''
   })
+  const [error, setError] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -15,17 +38,60 @@ export default function ContattaciBlock() {
       ...prev,
       [name]: value
     }))
+    if (error) setError('')
   }
 
-  const handleSubmit = (e) => {
+  const resetForm = () =>
+    setFormData({ nome: '', email: '', telefono: '', messaggio: '', spam: '' })
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    if (formData.spam !== '5') {
-      alert('Risposta anti-spam non corretta. La risposta corretta è 5.')
+    // Anti-spam: must be exactly 5, otherwise do NOT send.
+    if (formData.spam.trim() !== '5') {
+      setError('Verifica anti-spam non corretta: la risposta a 3+2 è 5.')
       return
     }
-    console.log('Form submitted:', formData)
-    alert('Messaggio inviato con successo!')
-    setFormData({ nome: '', email: '', telefono: '', messaggio: '', spam: '' })
+    setError('')
+
+    // Preferred path: EmailJS delivers straight to the inbox (once configured).
+    if (emailjsReady) {
+      setSending(true)
+      try {
+        await emailjs.send(
+          EMAILJS.serviceId,
+          EMAILJS.templateId,
+          {
+            nome: formData.nome,
+            email: formData.email,
+            telefono: formData.telefono || '—',
+            messaggio: formData.messaggio,
+            reply_to: formData.email,
+            recipients: RECIPIENTS,
+          },
+          { publicKey: EMAILJS.publicKey }
+        )
+        setSubmitted(true)
+        resetForm()
+      } catch (err) {
+        console.error('EmailJS error:', err)
+        setError('Si è verificato un errore durante l\'invio. Riprova o scrivici via email.')
+      } finally {
+        setSending(false)
+      }
+      return
+    }
+
+    // Fallback (EmailJS not yet configured): open the visitor's mail app.
+    const subject = `Richiesta di contatto dal sito - ${formData.nome || 'Sito web'}`
+    const body =
+      `Nome e Cognome: ${formData.nome}\n` +
+      `Email: ${formData.email}\n` +
+      `Telefono: ${formData.telefono || '—'}\n\n` +
+      `Messaggio:\n${formData.messaggio}\n`
+    window.location.href =
+      `mailto:${RECIPIENTS}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    setSubmitted(true)
+    resetForm()
   }
 
   return (
@@ -84,6 +150,27 @@ export default function ContattaciBlock() {
       {/* CONTATTACI FORM BLOCK */}
       <div className="contattaci-form-block">
         <div className="contattaci-form-wrapper">
+          {submitted ? (
+            <div className="contattaci-thankyou" style={{ textAlign: 'center', padding: '40px 20px', color: 'white' }}>
+              <div style={{ fontSize: '48px', marginBottom: '16px' }}>
+                <i className="fas fa-circle-check" style={{ color: '#34b8fe' }}></i>
+              </div>
+              <h3 style={{ fontSize: '26px', fontWeight: 900, margin: '0 0 12px 0', color: 'white' }}>
+                Grazie per averci contattato!
+              </h3>
+              <p style={{ fontSize: '16px', lineHeight: 1.7, margin: '0 auto 28px', maxWidth: '520px', color: 'rgba(255,255,255,0.85)' }}>
+                Abbiamo ricevuto la tua richiesta. Ti risponderemo il prima possibile.
+                Se la tua app di posta si è aperta, ricordati di premere <strong>Invia</strong> per completare l'invio.
+              </p>
+              <button
+                type="button"
+                onClick={() => setSubmitted(false)}
+                style={{ backgroundColor: '#34b8fe', color: '#001839', border: 'none', padding: '12px 28px', borderRadius: '30px', fontWeight: 700, fontSize: '15px', cursor: 'pointer' }}
+              >
+                Invia un altro messaggio
+              </button>
+            </div>
+          ) : (
           <form onSubmit={handleSubmit} className="contattaci-form">
             <div className="form-row-two">
               <div className="form-group">
@@ -150,8 +237,17 @@ export default function ContattaciBlock() {
               />
             </div>
 
-            <button type="submit" className="form-button">Invia</button>
+            {error && (
+              <p style={{ color: '#ffd2d2', backgroundColor: 'rgba(220,0,0,0.25)', padding: '10px 14px', borderRadius: '8px', fontSize: '14px', margin: '0 0 8px 0' }}>
+                {error}
+              </p>
+            )}
+
+            <button type="submit" className="form-button" disabled={sending}>
+              {sending ? 'Invio in corso…' : 'Invia'}
+            </button>
           </form>
+          )}
         </div>
       </div>
     </>

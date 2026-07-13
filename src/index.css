@@ -3190,6 +3190,45 @@ img { max-width: 100%; }
 
 /* ---------- Mobile (≤ 768px) ---------- */
 @media (max-width: 768px) {
+  /* --- Professional mobile baseline --- */
+  html { -webkit-text-size-adjust: 100%; }
+  body { -webkit-tap-highlight-color: transparent; }
+
+  /* Form controls at 16px so iOS doesn't auto-zoom on focus */
+  input, textarea, select { font-size: 16px !important; }
+  .form-input, .form-textarea { padding: 14px 18px !important; }
+  .form-button { min-height: 48px; padding: 12px 40px !important; }
+
+  /* --- Floating action buttons: tight, uniform, icon-only stack --- */
+  .fab-search {
+    bottom: calc(128px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 16px !important;
+    width: 46px !important;
+    height: 46px !important;
+    z-index: 900 !important;
+  }
+  .fab-contact {
+    bottom: calc(72px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 16px !important;
+    width: 46px !important;
+    height: 46px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    z-index: 900 !important;
+  }
+  .fab-contact-label { display: none; }
+  .fab-contact i { font-size: 17px; }
+  .scroll-top {
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    right: 16px;
+    width: 46px;
+    height: 46px;
+    z-index: 900;
+  }
+
+  /* Quote-slider dots: real tap targets */
+  .qc-dot { width: 12px !important; height: 12px !important; padding: 6px; box-sizing: content-box; background-clip: content-box; }
+
   /* --- Navbar: swap horizontal nav for hamburger --- */
   .topbar { padding: 0 16px; height: 52px; }
   /* Keep the school logo visible on mobile, hide the social icons */

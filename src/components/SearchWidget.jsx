@@ -95,6 +95,7 @@ export default function SearchWidget() {
       <button
         onClick={() => setOpen(true)}
         aria-label="Cerca"
+        className="fab-search"
         style={{
           position: 'fixed',
           bottom: '140px',
