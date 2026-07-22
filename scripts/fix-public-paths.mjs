@@ -6,9 +6,10 @@
  * in the `public` folder (e.g. url(/foo.png), src="/foo.jpg"). On a project
  * Pages deployment those resolve to the domain root and 404.
  *
- * This script prefixes ONLY image URLs that are root-absolute and not already
+ * This script prefixes ONLY asset URLs that are root-absolute and not already
  * based, leaving routes (/contattaci) and Vite assets (/School_Project/assets/…)
- * completely alone.
+ * completely alone. Matching requires a known file extension, so extensionless
+ * router paths can never be rewritten by accident.
  */
 import fs from 'fs'
 import path from 'path'
@@ -17,8 +18,10 @@ const BASE = '/School_Project/'
 const DIST = 'dist'
 const exts = new Set(['.js', '.css', '.html'])
 
-// Quote/paren + "/" + (not already based) + path ending in an image extension.
-const re = /([("'])\/(?!School_Project\/)([^"')]*?\.(?:png|jpe?g|jfif|svg|gif|webp))/g
+// Quote/paren + "/" + (not already based) + path ending in a public asset extension.
+// Covers documents/audio too (PDF book lists, regulations, MP3 homilies), not just images.
+const re =
+  /([("'])\/(?!School_Project\/)([^"')]*?\.(?:png|jpe?g|jfif|svg|gif|webp|pdf|mp3|docx|xlsx))/g
 
 let filesChanged = 0
 let refsChanged = 0
