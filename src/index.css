@@ -642,7 +642,7 @@ a { text-decoration: none; }
   overflow: hidden;
 }
 .risorse-img-tall {
-  background: linear-gradient(160deg, #c8b89a, #9a8070);
+  background: #c8b89a url('./assets/risorse-1.jpg') center / cover no-repeat;
   border-radius: 120px 120px 24px 24px;
   height: 100%;
 }
@@ -654,12 +654,12 @@ a { text-decoration: none; }
 }
 .risorse-img-top {
   flex: 1;
-  background: linear-gradient(160deg, #a8b8c8, #7090a8);
+  background: #a8b8c8 url('./assets/risorse-2.jpg') center / cover no-repeat;
   border-radius: 24px 24px 24px 24px;
 }
 .risorse-img-bottom {
   flex: 1;
-  background: linear-gradient(160deg, #b8c8a8, #809070);
+  background: #b8c8a8 url('./assets/risorse-3.jpg') center / cover no-repeat;
   border-radius: 24px 24px 120px 120px;
 }
 
