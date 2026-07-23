@@ -1298,6 +1298,12 @@ a { text-decoration: none; }
   font-weight: 700;
   margin-bottom: 18px;
 }
+/* The heading wraps a <Link>; without this the anchor keeps the browser's
+   default blue/purple link colour instead of inheriting the heading's. */
+.footer-col-title a {
+  color: inherit;
+  font-weight: inherit;
+}
 .footer-col-subtitle {
   color: white;
   font-size: 13px;
@@ -3173,8 +3179,16 @@ a { text-decoration: none; }
    RESPONSIVE / MOBILE OPTIMIZATION
    ============================================================ */
 
-/* Never allow horizontal scroll; images always fit */
-html, body { overflow-x: hidden; max-width: 100%; }
+/* Never allow horizontal scroll; images always fit.
+   `clip` rather than `hidden`: hidden turns html/body into a scroll container,
+   which silently breaks `position: sticky` for every descendant (the Iscrizioni
+   tab bar). `clip` prevents the same overflow without that side effect. The
+   hidden declaration stays first as a fallback for browsers without `clip`. */
+html, body {
+  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+}
 img { max-width: 100%; }
 
 /* Mobile hamburger is hidden on desktop */
@@ -3397,7 +3411,8 @@ img { max-width: 100%; }
   .logo-bar-item img { max-height: 56px; max-width: 100%; }
 
   /* --- Iscrizioni tabs: wrap and compact --- */
-  .iscrizioni-tab-bar { flex-wrap: wrap; overflow-x: auto; }
+  /* top matches the shorter mobile .topbar (52px) so no gap shows through. */
+  .iscrizioni-tab-bar { flex-wrap: wrap; overflow-x: auto; top: 52px; }
   .iscrizioni-tab { padding: 10px 14px !important; font-size: 13px !important; }
 
   /* --- Montini history blocks --- */
@@ -3463,4 +3478,59 @@ img { max-width: 100%; }
 @media (max-width: 480px) {
   .mission-text p { font-size: 25px; }
   .docenti-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ---------- Oversized decorative page watermark ----------
+   Repeats the page title as faded background lettering, anchored directly
+   above and below the heading block so the two stay visually grouped.
+   Purely decorative: aria-hidden in the markup, non-selectable and
+   click-through here. Overflow is clipped by the section. */
+.page-watermark {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  /* Defaults suit a short lead word; pages with longer words override these
+     inline so the lettering still fits the column. */
+  --wm-lead-size: clamp(80px, 11vw, 175px);
+  --wm-mid-size: clamp(34px, 4.6vw, 74px);
+  --wm-tail-size: clamp(64px, 9.5vw, 145px);
+}
+.page-watermark span {
+  color: rgba(255, 255, 255, 0.06);
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+/* Baseline-aligned row: `gap` is the space between "50" and "Anni di". */
+.page-watermark .wm-top {
+  position: absolute;
+  bottom: calc(100% + 18px);
+  left: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 34px;
+}
+.page-watermark .wm-lead { font-size: var(--wm-lead-size); }
+.page-watermark .wm-mid { font-size: var(--wm-mid-size); }
+.page-watermark .wm-tail {
+  position: absolute;
+  top: calc(100% + 18px);
+  left: 0;
+  font-size: var(--wm-tail-size);
+}
+/* Keep the real content above the lettering. */
+.page-watermark-content {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .page-watermark .wm-top { gap: 24px; }
+}
+/* Too cramped to read behind the text on phones. */
+@media (max-width: 768px) {
+  .page-watermark { display: none; }
 }

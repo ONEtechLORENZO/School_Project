@@ -13,8 +13,10 @@ const calendarLinks = [
   },
   {
     label: 'iCalendar',
-    href: `data:text/calendar;charset=utf-8,${encodeURIComponent('BEGIN:VCALENDAR\r\nVERSION:2.0\r\nBEGIN:VEVENT\r\nDTSTART;VALUE=DATE:20260726\r\nDTEND;VALUE=DATE:20260808\r\nSUMMARY:' + EVENT_TITLE + '\r\nEND:VEVENT\r\nEND:VCALENDAR')}`,
-    download: 'esperienza-terra-santa.ics',
+    // Live feed from the school's events calendar. webcal:// hands the URL to the
+    // visitor's calendar app, so the event stays in sync if it is edited at source.
+    href: 'webcal://www.istitutomontini.it/event/esperienza-estiva-in-terra-santa/?ical=1',
+    sameTab: true,
   },
   {
     label: 'Outlook 365',
@@ -90,7 +92,7 @@ export default function EventoTerraSantaPage() {
                   <a
                     key={opt.label}
                     href={opt.href}
-                    target={opt.download ? undefined : '_blank'}
+                    target={opt.download || opt.sameTab ? undefined : '_blank'}
                     rel="noreferrer"
                     download={opt.download}
                     onClick={() => setOpen(false)}

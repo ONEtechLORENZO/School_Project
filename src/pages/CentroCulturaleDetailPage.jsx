@@ -16,16 +16,27 @@ export default function CentroCulturaleDetailPage() {
       <Navbar />
 
       {/* Content Section */}
-      <section style={{ backgroundColor: '#001839', padding: '80px', minHeight: '600px' }}>
+      <section style={{ backgroundColor: '#001839', padding: '80px', minHeight: '600px', position: 'relative', overflow: 'hidden' }}>
         <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '80px', alignItems: 'center' }}>
           {/* Left Column */}
-          <div>
-            <h1 style={{ fontSize: '40px', fontWeight: 900, color: 'white', margin: '0 0 30px 0', lineHeight: 1.2 }}>
-              Centro Culturale Don Carlo Calori - 50 Anni di Montini
-            </h1>
-            <div style={{ fontSize: '14px', color: '#999' }}>
-              <p style={{ margin: '0 0 8px 0' }}>Published</p>
-              <p style={{ margin: 0, fontSize: '16px', color: 'white', fontWeight: 600 }}>08/04/2026</p>
+          <div style={{ position: 'relative' }}>
+            {/* Decorative only — the same words are already in the <h1> below. */}
+            <div className="page-watermark" aria-hidden="true">
+              <div className="wm-top">
+                <span className="wm-lead">50</span>
+                <span className="wm-mid">Anni di</span>
+              </div>
+              <span className="wm-tail">Montini</span>
+            </div>
+
+            <div className="page-watermark-content">
+              <h1 style={{ fontSize: '40px', fontWeight: 900, color: 'white', margin: '0 0 30px 0', lineHeight: 1.2 }}>
+                Centro Culturale Don Carlo Calori - 50 Anni di Montini
+              </h1>
+              <div style={{ fontSize: '14px', color: '#999' }}>
+                <p style={{ margin: '0 0 8px 0' }}>Published</p>
+                <p style={{ margin: 0, fontSize: '16px', color: 'white', fontWeight: 600 }}>08/04/2026</p>
+              </div>
             </div>
           </div>
 

@@ -16,16 +16,31 @@ export default function MontinialiDetailPage() {
       <Navbar />
 
       {/* Content Section */}
-      <section style={{ backgroundColor: '#001839', padding: '80px', minHeight: '600px' }}>
+      <section style={{ backgroundColor: '#001839', padding: '80px', minHeight: '600px', position: 'relative', overflow: 'hidden' }}>
         <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '80px', alignItems: 'center' }}>
           {/* Left Column */}
-          <div>
-            <h1 style={{ fontSize: '48px', fontWeight: 900, color: 'white', margin: '0 0 30px 0', lineHeight: 1.2 }}>
-              Montiniadi 2026
-            </h1>
-            <div style={{ fontSize: '14px', color: '#999' }}>
-              <p style={{ margin: '0 0 8px 0' }}>Published</p>
-              <p style={{ margin: 0, fontSize: '16px', color: 'white', fontWeight: 600 }}>08/04/2026</p>
+          <div style={{ position: 'relative' }}>
+            {/* Decorative only — the same words are already in the <h1> below.
+                "Montiniadi" is a long word, so the lead is sized down to fit. */}
+            <div
+              className="page-watermark"
+              aria-hidden="true"
+              style={{ '--wm-lead-size': 'clamp(46px, 6.4vw, 104px)', '--wm-tail-size': 'clamp(70px, 10.5vw, 172px)' }}
+            >
+              <div className="wm-top">
+                <span className="wm-lead">Montiniadi</span>
+              </div>
+              <span className="wm-tail">2026</span>
+            </div>
+
+            <div className="page-watermark-content">
+              <h1 style={{ fontSize: '48px', fontWeight: 900, color: 'white', margin: '0 0 30px 0', lineHeight: 1.2 }}>
+                Montiniadi 2026
+              </h1>
+              <div style={{ fontSize: '14px', color: '#999' }}>
+                <p style={{ margin: '0 0 8px 0' }}>Published</p>
+                <p style={{ margin: 0, fontSize: '16px', color: 'white', fontWeight: 600 }}>08/04/2026</p>
+              </div>
             </div>
           </div>
 
