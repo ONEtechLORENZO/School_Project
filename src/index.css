@@ -1407,8 +1407,9 @@ a { text-decoration: none; }
 .white { color: white; }
 
 .iscrizioni-desc {
-  font-size: 13px;
-  line-height: 1.7;
+  /* Matches the body copy on the initiative detail pages. */
+  font-size: 16px;
+  line-height: 1.8;
   color: #333;
   margin-bottom: 28px;
   text-align: justify;
@@ -1456,6 +1457,68 @@ a { text-decoration: none; }
 .iscrizioni-doc-btn:hover { opacity: 0.88; transform: translateX(4px); }
 .iscrizioni-doc-btn.navy { background: var(--navy); }
 .iscrizioni-doc-btn.crimson-btn { background: var(--crimson); }
+
+/* --- ScuolaPay payment note (repeated under each enrolment route) --- */
+.iscrizioni-pagamenti-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--crimson);
+  margin: 0 0 14px 0;
+}
+.iscrizioni-pagamenti-title.white-text { color: white; }
+.iscrizioni-pagamenti-list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.iscrizioni-pagamenti-list.white-text { color: rgba(255, 255, 255, 0.85); }
+/* Trailing note sits below the payment list. */
+.iscrizioni-desc-note { margin: 24px 0 0 0; }
+
+/* --- Enrolment call to action (right-hand column) --- */
+.iscrizioni-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 26px;
+  padding-top: 150px;
+  /* Horizontal position of the block inside its column. The block is only as
+     wide as its button, so this margin is what actually positions it:
+     larger = further right, smaller = further left. */
+  margin-left: 340px;
+}
+.iscrizioni-cta-title {
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 0;
+}
+.iscrizioni-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--navy);
+  color: white;
+  padding: 18px 32px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 800;
+  transition: opacity .2s, transform .15s;
+}
+.iscrizioni-cta-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+/* On the blue section the default blue button would disappear. */
+.bg-navy .iscrizioni-cta-btn { background: var(--crimson); }
+
+@media (max-width: 768px) {
+  .iscrizioni-cta { padding-top: 8px; margin-left: 0; }
+  .iscrizioni-cta-title { font-size: 28px; }
+}
 
 /* ── REGOLAMENTO CONTENT ── */
 .regolamento-articles {

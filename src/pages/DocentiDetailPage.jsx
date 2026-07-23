@@ -18,7 +18,7 @@ const docentiData = {
   },
   'palmieri-irene': {
     name: 'Palmieri Irene',
-    image: '/Biondi.png',
+    // No portrait on file — this previously pointed at Biondi Veronica's photo.
     bio: [
       'Sono laureata magistrale in Lingue e letterature moderne europee e americane alla Sapienza di Roma, ma il momento che ha davvero fatto la differenza nel mio percorso è stato l\'Erasmus a Madrid. Vivere immersa nella lingua e nella cultura spagnola mi ha insegnato qualcosa che nessun manuale può trasmettere: una lingua è viva, è relazione, è scoperta continua.',
       'Oggi sono docente abilitata all\'insegnamento dello spagnolo ed esaminatrice presso l\'Istituto Cervantes di Milano. In questo ruolo valuto le competenze linguistiche degli studenti per le certificazioni ufficiali, un\'esperienza che mi permette di conoscere da vicino le sfide e i progressi di chi studia questa lingua.',
@@ -176,24 +176,26 @@ export default function DocentiDetailPage() {
       <Navbar />
       <section style={{ backgroundColor: 'var(--navy)', padding: '100px 80px', minHeight: '800px' }}>
         <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-          {/* Top Section: Image + Name */}
-          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '80px', marginBottom: '60px' }}>
-            {/* Image */}
-            <div
-              style={{
-                width: '220px',
-                height: '220px',
-                minWidth: '220px',
-                borderRadius: '50%',
-                backgroundImage: `url(${docente.image})`,
-                backgroundSize: '110%',
-                backgroundPosition: 'center',
-                boxShadow: '0 10px 40px rgba(0, 0, 0, 0.3)',
-              }}
-            ></div>
+          {/* Top Section: Image + Name. Teachers without a portrait show the
+              name alone rather than someone else's photo. */}
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: docente.image ? '80px' : '0', marginBottom: '60px' }}>
+            {docente.image && (
+              <div
+                style={{
+                  width: '220px',
+                  height: '220px',
+                  minWidth: '220px',
+                  borderRadius: '50%',
+                  backgroundImage: `url(${docente.image})`,
+                  backgroundSize: '110%',
+                  backgroundPosition: 'center',
+                  boxShadow: '0 10px 40px rgba(0, 0, 0, 0.3)',
+                }}
+              ></div>
+            )}
 
             {/* Name */}
-            <h1 style={{ fontSize: '72px', fontWeight: 900, color: 'white', margin: 0, lineHeight: 1.2, paddingTop: '60px' }}>
+            <h1 style={{ fontSize: '72px', fontWeight: 900, color: 'white', margin: 0, lineHeight: 1.2, paddingTop: docente.image ? '60px' : '0' }}>
               {docente.name}
             </h1>
           </div>

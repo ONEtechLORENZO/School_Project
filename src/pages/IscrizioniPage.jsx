@@ -7,7 +7,8 @@ import CinqueMilleBlock from '../components/CinqueMilleBlock'
 import ContributiBlock from '../components/ContributiBlock'
 import VideoTour from '../components/VideoTour'
 
-const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdr7v_HU_TKr_lpxkPl9qCxhJJaWSL2Bx9N_jkxzbJqbwcCqQ/viewform'
+const SCUOLAPAY_URL =
+  'https://form.scuolapay.it/iscriviti/gb-montini?token=2e5e2f530572252640b5a2990099172af65adef965878067fce607aa7265b3c7'
 
 const tabs = [
   { label: 'Primo anno', target: 'primo-anno' },
@@ -15,35 +16,49 @@ const tabs = [
   { label: 'Trasferimento da altro istituto', target: 'trasferimento' },
 ]
 
-const primoAnnoButtons = [
-  'Iscrizione in prima',
-  'Anagrafica Familiare',
-  'Autorizzazioni Uscite',
-  'Trattamento dei Dati Personali (GDPR 2016/679)',
-  'Proposta di Collaborazione',
-  'Contributo Economico',
-  'Iscrizioni e Promesse RID',
-]
+// The payment note is identical under all three enrolment routes.
+// `light` = rendered on a coloured background, so the text flips to white.
+function PagamentiScuolaPay({ light }) {
+  const tone = light ? ' white-text' : ''
+  return (
+    <>
+      <p className={`iscrizioni-pagamenti-title${tone}`}>
+        Informazioni sui pagamenti tramite ScuolaPay
+      </p>
+      <ul className={`iscrizioni-pagamenti-list${tone}`}>
+        <li>
+          Per la ricezione dei <strong>bonifici, ScuolaPay</strong> si avvale di{' '}
+          <strong>MangoPay</strong>, un istituto di moneta elettronica autorizzato che fornisce
+          infrastrutture di pagamento a livello europeo.
+        </li>
+        <li>
+          Per questo motivo, <strong>l’IBAN indicato per il bonifico</strong> risulterà di un
+          istituto <strong>FRANCESE</strong>. Trattandosi comunque di un conto in area SEPA, il
+          bonifico non comporta alcuna commissione aggiuntiva rispetto a un normale bonifico
+          bancario effettuato in Italia, né tempi di accredito più lunghi.
+        </li>
+      </ul>
+    </>
+  )
+}
 
-const anniSuccessiviButtons = [
-  'Iscrizione ad anni successivi',
-  'Anagrafica Familiare',
-  'Autorizzazioni Uscite',
-  'Trattamento dei Dati Personali (GDPR 2016/679)',
-  'Proposta di Collaborazione',
-  'Contributo Economico',
-  'Iscrizioni e Promesse RID',
-]
-
-const trasferimentoButtons = [
-  'Trasferimento da altro istituto',
-  'Anagrafica Familiare',
-  'Autorizzazioni Uscite',
-  'Trattamento dei Dati Personali (GDPR 2016/679)',
-  'Proposta di Collaborazione',
-  'Contributo Economico',
-  'Iscrizioni e Promesse RID',
-]
+function IscrizioneCta({ light }) {
+  return (
+    <div className="iscrizioni-cta">
+      <h3 className={`iscrizioni-cta-title ${light ? 'white' : 'crimson'}`}>
+        Iscrizione ad<br />anni successivi
+      </h3>
+      <a
+        href={SCUOLAPAY_URL}
+        target="_blank"
+        rel="noreferrer"
+        className="iscrizioni-cta-btn"
+      >
+        Accedi al modulo di iscrizione <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  )
+}
 
 function scrollTo(id) {
   const el = document.getElementById(id)
@@ -118,22 +133,14 @@ export default function IscrizioniPage() {
           <div className="iscrizioni-spacer" />
           <h3 className="iscrizioni-title crimson">Iscrizione<br />Primo Anno</h3>
           <p className="iscrizioni-desc">
-            <em>
-              Hai scelto di iniziare la tua avventura al Liceo Montini: BENVENUTO!<br />
-              Per formalizzare la tua iscrizione sarà sufficiente prendere visione dei seguenti
-              materiali e compilare in tutte le sue parti il questionario che trovi di seguito.
-            </em>
+            Hai scelto di iniziare la tua avventura al Liceo Montini: BENVENUTO!<br />
+            Per completare l’iscrizione, accedi al modulo online di <strong>ScuolaPay</strong> e
+            compilalo integralmente in ogni sua sezione.
           </p>
-          <a href={FORM_URL} target="_blank" rel="noreferrer" className="iscrizioni-link-btn">
-            LINK AL MODULO <i className="fas fa-arrow-up-right-from-square"></i>
-          </a>
+          <PagamentiScuolaPay />
         </div>
         <div className="iscrizioni-right">
-          {primoAnnoButtons.map((btn) => (
-            <a key={btn} href={FORM_URL} target="_blank" rel="noreferrer" className="iscrizioni-doc-btn navy">
-              {btn}
-            </a>
-          ))}
+          <IscrizioneCta />
         </div>
       </div>
 
@@ -144,23 +151,14 @@ export default function IscrizioniPage() {
           <div className="iscrizioni-spacer" />
           <h3 className="iscrizioni-title white">Iscrizione<br />Anni Successivi</h3>
           <p className="iscrizioni-desc white-text">
-            <em>
-              Anche quest'anno inizia la tua avventura al Liceo Montini.<br />
-              Come di consueto dovrai formalizzare la tua iscrizione: per farlo sarà sufficiente
-              prendere visione dei seguenti materiali e compilare in tutte le sue parti il
-              questionario che trovi di seguito.
-            </em>
+            Anche quest’anno inizia la tua avventura al Liceo Montini.<br />
+            Per completare l’iscrizione, accedi al modulo online di <strong>ScuolaPay</strong> e
+            compilalo integralmente in ogni sua sezione.
           </p>
-          <a href={FORM_URL} target="_blank" rel="noreferrer" className="iscrizioni-link-btn">
-            LINK AL MODULO <i className="fas fa-arrow-up-right-from-square"></i>
-          </a>
+          <PagamentiScuolaPay light />
         </div>
         <div className="iscrizioni-right">
-          {anniSuccessiviButtons.map((btn) => (
-            <a key={btn} href={FORM_URL} target="_blank" rel="noreferrer" className="iscrizioni-doc-btn crimson-btn">
-              {btn}
-            </a>
-          ))}
+          <IscrizioneCta light />
         </div>
       </div>
 
@@ -169,30 +167,24 @@ export default function IscrizioniPage() {
         <div className="iscrizioni-left">
           <h2 className="iscrizioni-section-label crimson">Trasferimento da altri istituti</h2>
           <div className="iscrizioni-spacer" />
-          <h3 className="iscrizioni-title crimson">Trasferimento da<br />altri istituti</h3>
+          <h3 className="iscrizioni-title crimson">Trasferimento<br />da altri istituti</h3>
           <p className="iscrizioni-desc">
-            <em>
-              Hai scelto di cambiare scuola e di iscriverti al Montini: benvenuto.<br /><br />
-              Se sei già in accordo con la Presidenza e hai già ottenuto il nullaosta
-              dall'istituto di provenienza non ti resta che formalizzare la tua iscrizione:
-              per farlo sarà sufficiente prendere visione dei seguenti materiali e compilare
-              in tutte le sue parti il questionario che trovi di seguito.<br /><br />
-              Se invece non hai ancora un accordo con la Presidenza non esitare a scrivere a{' '}
-              <a href="mailto:fabrizio.fassini@istitutomontini.it" className="iscrizioni-email">
-                fabrizio.fassini@istitutomontini.it
-              </a>
-            </em>
+            Hai scelto di cambiare scuola e di iscriverti al Montini: benvenuto.<br />
+            Se sei già in accordo con la Presidenza e hai già ottenuto il nullaosta dall’istituto
+            di provenienza non ti resta che formalizzare la tua iscrizione: per farlo sarà
+            sufficiente accedi al modulo online di ScuolaPay e compilalo integralmente in ogni
+            sua sezione.
           </p>
-          <a href={FORM_URL} target="_blank" rel="noreferrer" className="iscrizioni-link-btn">
-            LINK AL MODULO <i className="fas fa-arrow-up-right-from-square"></i>
-          </a>
+          <PagamentiScuolaPay />
+          <p className="iscrizioni-desc iscrizioni-desc-note">
+            Se invece non hai ancora un accordo con la Presidenza non esitare a scrivere a{' '}
+            <a href="mailto:fabrizio.fassini@istitutomontini.it" className="iscrizioni-email">
+              fabrizio.fassini@istitutomontini.it
+            </a>
+          </p>
         </div>
         <div className="iscrizioni-right">
-          {trasferimentoButtons.map((btn) => (
-            <a key={btn} href={FORM_URL} target="_blank" rel="noreferrer" className="iscrizioni-doc-btn navy">
-              {btn}
-            </a>
-          ))}
+          <IscrizioneCta />
         </div>
       </div>
 
